@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item android:id="@+id/action_close"
+        android:icon="@drawable/ic_close_deep_orange_500_36dp"
+        android:title="@string/tutup"
+        app:showAsAction="always"
+        tools:context=".activities.ImageSliderActivity"/>
+</menu>

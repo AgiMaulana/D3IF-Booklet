@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/video_gradient"/>
+
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/ic_play_circle_filled_white_48dp"/>
+    </item>
+
+</layer-list>
