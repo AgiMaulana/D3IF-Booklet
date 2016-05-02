@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".activities.SettingActivity">
+    <item
+        android:id="@+id/action_update_booklet"
+        android:icon="@drawable/ic_update_blue_500_24dp"
+        android:title="@string/pembaruan_data"/>
+</menu>

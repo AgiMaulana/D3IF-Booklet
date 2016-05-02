@@ -6,6 +6,8 @@ import org.simpleframework.xml.Root;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.realm.RealmObject;
+
 /**
  * Created by Agi Maulana on 4/13/2016.
  */
@@ -16,5 +18,9 @@ public class Booklet {
 
     public List<Project> getProjects() {
         return projects;
+    }
+
+    public void setProjects(List<Project> projects) {
+        this.projects = projects;
     }
 }

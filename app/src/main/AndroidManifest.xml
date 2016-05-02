@@ -32,8 +32,6 @@
                 android:value=".activites.MainActivity"/>
         </activity>
 
-        <activity android:name=".activities.ProjectSliderActivity"/>
-
         <activity android:name=".activities.ImageSliderActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:parentActivityName=".activities.MainActivity">
@@ -41,6 +39,23 @@
                 android:name="android.permission.PARENT_ACTIVITY"
                 android:value=".activites.MainActivity"/>
         </activity>
+
+        <activity android:name=".activities.SettingActivity"
+            android:label="@string/pengaturan"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.permission.PARENT_ACTIVITY"
+                android:value=".activites.MainActivity"/>
+        </activity>
+
+        <activity android:name=".activities.UpdateBookletActivity"
+            android:label="@string/pembaruan_data"
+            android:parentActivityName=".activities.SettingActivity">
+            <meta-data
+                android:name="android.permission.PARENT_ACTIVITY"
+                android:value=".activites.SettingActivity"/>
+        </activity>
+
     </application>
 
 </manifest>

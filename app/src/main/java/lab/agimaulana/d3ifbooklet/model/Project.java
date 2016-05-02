@@ -2,6 +2,8 @@ package lab.agimaulana.d3ifbooklet.model;
 
 import org.simpleframework.xml.Element;
 
+import io.realm.RealmObject;
+
 /**
  * Created by Agi Maulana on 4/13/2016.
  */

@@ -5,6 +5,8 @@ import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 import org.simpleframework.xml.Text;
 
+import io.realm.RealmObject;
+
 /**
  * Created by Agi Maulana on 4/13/2016.
  */

@@ -31,6 +31,7 @@ package lab.agimaulana.d3ifbooklet.activities;
         import lab.agimaulana.d3ifbooklet.adapter.RVDeveloperAdapter;
         import lab.agimaulana.d3ifbooklet.adapter.RVPreceptorsAdapter;
         import lab.agimaulana.d3ifbooklet.adapter.RVScreenshotAdapter;
+        import lab.agimaulana.d3ifbooklet.helper.Helper;
         import lab.agimaulana.d3ifbooklet.model.Lecturer;
         import lab.agimaulana.d3ifbooklet.model.Project;
         import lab.agimaulana.d3ifbooklet.model.ProjectList;
@@ -51,6 +52,7 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
     private RecyclerView recyclerDevelopers;
     private RecyclerView recyclerPreceptors;
     private ArrayList<String> imageUrls = new ArrayList<>();
+    private Helper helper;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,6 +63,7 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_deep_orange_500_36dp);
         getSupportActionBar().setTitle("");
+        helper = new Helper(this);
         setupWidget();
         displayData();
     }
@@ -88,7 +91,8 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
             startActivity(new Intent(this, MainActivity.class));
             return;
         }
-        Project project = ProjectList.projects.get(position);
+        //Project project = ProjectList.projects.get(position);
+        Project project = helper.getProject(position);
         getImagesUrl(project);
         String videoThumbnail = "http://img.youtube.com/vi/" + project.getVideo() + "/hqdefault.jpg";
         Log.d("Picasso - poster", videoThumbnail);
@@ -147,7 +151,7 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
             startActivity(new Intent(this, MainActivity.class));
             return;
         }
-        Project project = ProjectList.projects.get(position);
+        Project project = helper.getProject(position);
         openYoutubeVideo(project.getVideo());
     }
 

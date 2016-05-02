@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import io.realm.RealmList;
 import lab.agimaulana.d3ifbooklet.R;
 import lab.agimaulana.d3ifbooklet.model.Lecturer;
 import lab.agimaulana.d3ifbooklet.model.viewholder.TwoLineListViewHolder;

@@ -15,6 +15,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import io.realm.RealmList;
 import lab.agimaulana.d3ifbooklet.R;
 import lab.agimaulana.d3ifbooklet.model.Project;
 import lab.agimaulana.d3ifbooklet.model.ProjectList;

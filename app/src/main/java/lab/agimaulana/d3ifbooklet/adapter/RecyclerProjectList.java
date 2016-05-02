@@ -1,5 +1,6 @@
 package lab.agimaulana.d3ifbooklet.adapter;
 
+import android.content.Context;
 import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,6 +11,8 @@ import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import lab.agimaulana.d3ifbooklet.R;
+import lab.agimaulana.d3ifbooklet.helper.Helper;
+import lab.agimaulana.d3ifbooklet.model.Booklet;
 import lab.agimaulana.d3ifbooklet.model.Project;
 import lab.agimaulana.d3ifbooklet.model.ProjectList;
 import lab.agimaulana.d3ifbooklet.model.viewholder.ProjectItemViewHolder;
@@ -19,10 +22,16 @@ import lab.agimaulana.d3ifbooklet.model.viewholder.ProjectItemViewHolder;
  */
 public class RecyclerProjectList extends RecyclerView.Adapter<ProjectItemViewHolder> implements View.OnClickListener {
 
+    private Booklet booklet;
     private String[] level = new String[]{"Proyek Tingkat I", "Proyek Tingkat II", "Proyek Akhir"};
     private int[] color = new int[]{R.color.amber_500, R.color.green_500, R.color.red_500};
     private OnItemClickListener mOnItemClickListener;
     private int position;
+
+    public RecyclerProjectList(Context context){
+        Helper helper = new Helper(context);
+        this.booklet = helper.getBooklet();
+    }
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener){
         this.mOnItemClickListener = onItemClickListener;
@@ -44,7 +53,7 @@ public class RecyclerProjectList extends RecyclerView.Adapter<ProjectItemViewHol
     @Override
     public void onBindViewHolder(final ProjectItemViewHolder holder, int position) {
         this.position = position;
-        Project project = ProjectList.projects.get(position);
+        Project project = booklet.getProjects().get(position);
         String url = "http://192.168.43.185/" + project.getPoster();
         Picasso.with(holder.itemView.getContext()).load(Uri.parse(url)).into(holder.getImageField(), new Callback() {
             @Override
@@ -81,7 +90,7 @@ public class RecyclerProjectList extends RecyclerView.Adapter<ProjectItemViewHol
 
     @Override
     public int getItemCount() {
-        return ProjectList.projects.size();
+        return booklet.getProjects().size();
     }
 
     @Override

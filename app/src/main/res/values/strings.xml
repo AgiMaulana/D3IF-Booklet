@@ -9,6 +9,24 @@
     <string name="pengembang">Pengembang</string>
     <string name="screenshot">Screenshot</string>
     <string name="tutup">Tutup</string>
+    <string name="nanti">Nanti</string>
+    <string name="error">Error. Tidak dapat memeriksa versi baru.</string>
+
+    <string name="cari">Cari</string>
+    <string name="pengaturan">Pengaturan</string>
+    <string name="tentang">Tentang</string>
+    <string name="pembaruan_data">Pembaruan data</string>
+
+    <string name="no_data_downloaded">Tidak ada data terunduh. Buka Pilihan menu -> Pengaturan -> Pembaruan data</string>
+    <string name="check_data_version">Periksa versi baru</string>
+    <string name="update_data">Perbarui data</string>
+    <string name="update">Perbarui</string>
+    <string name="data_update_available">Data baru tersedia</string>
+    <string name="data_update_version">Versi %1$s</string>
+    <string name="current_version_title">Versi data saat ini</string>
+    <string name="current_version_value">Versi %1$s data diperbarui pada %2$s</string>
+    <string name="last_checked">Diperiksa terakhir kali pada %1$s</string>
+    <string name="not_checked">Belum mengunduh data</string>
 
     <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
 </resources>

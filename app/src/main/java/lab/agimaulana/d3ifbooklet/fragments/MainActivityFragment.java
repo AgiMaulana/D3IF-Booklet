@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -20,10 +21,12 @@ import lab.agimaulana.d3ifbooklet.R;
 import lab.agimaulana.d3ifbooklet.activities.ViewProjectActivity2;
 import lab.agimaulana.d3ifbooklet.adapter.ListViewProjectList;
 import lab.agimaulana.d3ifbooklet.adapter.RecyclerProjectList;
+import lab.agimaulana.d3ifbooklet.helper.Helper;
 import lab.agimaulana.d3ifbooklet.model.Booklet;
 import lab.agimaulana.d3ifbooklet.model.GetBooklet;
 import lab.agimaulana.d3ifbooklet.model.Project;
 import lab.agimaulana.d3ifbooklet.model.ProjectList;
+import lab.agimaulana.d3ifbooklet.model.VersionChecker;
 import retrofit2.Response;
 
 /**
@@ -34,7 +37,8 @@ public class MainActivityFragment extends Fragment implements GetBooklet.FetchLi
     private ProgressBar progressBar;
     private RecyclerView recyclerView;
     private RecyclerProjectList projectAdapter;
-    private GetBooklet getBooklet;
+    private TextView tvEmpty;
+    //private GetBooklet getBooklet;
 
     @Nullable
     @Override
@@ -47,8 +51,13 @@ public class MainActivityFragment extends Fragment implements GetBooklet.FetchLi
         super.onActivityCreated(savedInstanceState);
         setupWidget();
         recyclerView.setVisibility(View.GONE);
-        getBooklet = new GetBooklet(this);
-        getBooklet.execute();
+        Helper helper = new Helper(getActivity());
+        if(helper.getBooklet() != null && helper.getBooklet().getProjects().size() > 0)
+            setupList();
+//        getBooklet = new GetBooklet(this);
+        //getBooklet.execute();
+
+      //  new VersionChecker(getActivity()).execute();
     }
 
     private void setupWidget(){
@@ -56,26 +65,27 @@ public class MainActivityFragment extends Fragment implements GetBooklet.FetchLi
         refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                getBooklet.execute();
+                //getBooklet.execute();
                 //setupList();
                 //Toast.makeText(getActivity(), "REFRESHED", Toast.LENGTH_SHORT).show();
                 refreshLayout.setRefreshing(false);
             }
         });
         refreshLayout.setColorSchemeColors(R.color.deepOrange_500, R.color.green_500, R.color.red_500);
+        tvEmpty = (TextView) getView().findViewById(R.id.empty);
         progressBar = (ProgressBar) getView().findViewById(R.id.progressbar);
         recyclerView = (RecyclerView) getView().findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
     }
 
     private void setupList(){
-        projectAdapter = new RecyclerProjectList();
+        projectAdapter = new RecyclerProjectList(getActivity());
         projectAdapter.setOnItemClickListener(this);
         recyclerView.setAdapter(projectAdapter);
         progressBar.setVisibility(View.GONE);
+        tvEmpty.setVisibility(View.GONE);
         recyclerView.setVisibility(View.VISIBLE);
     }
-
 
     @Override
     public void onResponse(Response<Booklet> response) {
