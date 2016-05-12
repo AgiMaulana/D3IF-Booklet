@@ -1,7 +1,11 @@
 package lab.agimaulana.d3ifbooklet.activities;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.annotation.MainThread;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +21,9 @@ import lab.agimaulana.d3ifbooklet.R;
 import lab.agimaulana.d3ifbooklet.helper.Helper;
 import lab.agimaulana.d3ifbooklet.model.Booklet;
 import lab.agimaulana.d3ifbooklet.model.checkversion.Version;
+import lab.agimaulana.d3ifbooklet.service.ImageDownloaderIntentService;
+import lab.agimaulana.d3ifbooklet.service.ImageDownloaderTask;
+import lab.agimaulana.d3ifbooklet.service.ServiceResultReceiver;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -24,7 +31,7 @@ import retrofit2.Response;
 /**
  * Created by Agi Maulana on 5/2/2016.
  */
-public class UpdateBookletActivity extends AppCompatActivity implements View.OnClickListener {
+public class UpdateBookletActivity extends AppCompatActivity implements View.OnClickListener, ImageDownloaderTask.ImageDownloadListener {
 
     private Helper helper;
     private TextView tvLastChecked;
@@ -34,6 +41,7 @@ public class UpdateBookletActivity extends AppCompatActivity implements View.OnC
     private Button btnCheck;
     private ImageButton btnUpdate;
     private ProgressBar progressBar;
+    private ProgressDialog progressDialog;
 
     private String checkedVersion;
 
@@ -42,6 +50,9 @@ public class UpdateBookletActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_data);
         helper = new Helper(this);
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setCancelable(false);
+        progressDialog.setIndeterminate(true);
         setupWidget();
     }
 
@@ -122,26 +133,33 @@ public class UpdateBookletActivity extends AppCompatActivity implements View.OnC
     }
 
     private void updateBooklet(){
-        final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setIndeterminate(true);
-        progressDialog.setCancelable(false);
-        progressDialog.show();
+        final ProgressDialog dialog = new ProgressDialog(this);
+        dialog.setIndeterminate(true);
+        dialog.setCancelable(false);
+        dialog.show();
+        final ImageDownloaderTask imageDownloaderTask = new ImageDownloaderTask(this);
+        imageDownloaderTask.setDownloadedListener(this);
 
         APIClient apiClient = ServiceAdapter.createService(APIClient.class);
         Call<Booklet> call = apiClient.getProjects();
         call.enqueue(new Callback<Booklet>() {
             @Override
             public void onResponse(Call<Booklet> call, Response<Booklet> response) {
-                progressDialog.cancel();
-                if(response.isSuccessful())
+                dialog.cancel();
+                if(response.isSuccessful()) {
                     helper.setBooklet(response.body(), checkedVersion);
-                else
+                    /*Intent service = new Intent(getApplicationContext(), ImageDownloaderIntentService.class);
+                    service.putExtra("receiver", receiver);
+                    startService(service);*/
+                    imageDownloaderTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                    progressDialog.show();
+                }else
                     Snackbar.make(btnCheck, R.string.error, Snackbar.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailure(Call<Booklet> call, Throwable t) {
-                progressDialog.cancel();
+                dialog.cancel();
                 Snackbar.make(btnCheck, R.string.error, Snackbar.LENGTH_SHORT).show();
             }
         });
@@ -151,5 +169,42 @@ public class UpdateBookletActivity extends AppCompatActivity implements View.OnC
     public void onBackPressed() {
         finish();
         super.onBackPressed();
+    }
+
+    /*@Override
+    public void onReceiveResult(int resultCode, Bundle resultData) {
+        if(resultCode == 1 && resultData != null){
+            int downloaded = resultData.getInt("downloaded");
+            int max = resultData.getInt("max");
+            progressDialog.setMax(max);
+            progressDialog.setProgress(downloaded);
+            progressDialog.setMessage(getString(R.string.menunduh_gambar_progress, downloaded, max));
+
+            if(progressDialog.getProgress() == progressDialog.getMax() && progressDialog.isShowing())
+                progressDialog.cancel();
+        }else{
+            if(progressDialog.isShowing())
+                progressDialog.cancel();
+        }
+    }*/
+
+    @Override
+    public void onDownloaded(final int current, final int max) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                progressDialog.setMessage(getString(R.string.menunduh_gambar_progress, current, max));
+            }
+        });
+    }
+
+    @Override
+    public void onFinish() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                progressDialog.cancel();
+            }
+        });
     }
 }

@@ -9,7 +9,7 @@ import retrofit2.converter.simplexml.SimpleXmlConverterFactory;
  */
 public class ServiceAdapter {
 
-    public static final String API_BASE_URL = "http://192.168.43.185/";
+    public static final String API_BASE_URL = "http://192.168.43.185:8000/";
 
     private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
 

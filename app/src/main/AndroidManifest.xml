@@ -3,6 +3,8 @@
     package="lab.agimaulana.d3ifbooklet">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -55,6 +57,11 @@
                 android:name="android.permission.PARENT_ACTIVITY"
                 android:value=".activites.SettingActivity"/>
         </activity>
+
+        <!--service android:name=".service.ImageDownloaderIntentService"
+            android:icon="@mipmap/ic_launcher"
+            android:exported="false"
+            android:label="Image Downloader"/-->
 
     </application>
 

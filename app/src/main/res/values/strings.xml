@@ -16,6 +16,7 @@
     <string name="pengaturan">Pengaturan</string>
     <string name="tentang">Tentang</string>
     <string name="pembaruan_data">Pembaruan data</string>
+    <string name="menunduh_gambar_progress">Mengunduh gambar %1$d/%2$d</string>
 
     <string name="no_data_downloaded">Tidak ada data terunduh. Buka Pilihan menu -> Pengaturan -> Pembaruan data</string>
     <string name="check_data_version">Periksa versi baru</string>
