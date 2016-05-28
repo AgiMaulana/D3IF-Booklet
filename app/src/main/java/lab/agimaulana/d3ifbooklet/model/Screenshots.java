@@ -3,6 +3,7 @@ package lab.agimaulana.d3ifbooklet.model;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +11,7 @@ import java.util.List;
  * Created by Agi Maulana on 4/13/2016.
  */
 @Element(name = "screenshots")
-public class Screenshots {
+public class Screenshots implements Serializable {
 
     @ElementList(inline = true)
     private List<Screenshot> screenshots = new ArrayList<>();

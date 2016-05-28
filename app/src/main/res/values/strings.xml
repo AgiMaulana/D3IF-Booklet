@@ -9,6 +9,14 @@
     <string name="pengembang">Pengembang</string>
     <string name="screenshot">Screenshot</string>
     <string name="tutup">Tutup</string>
+    <string name="batal">Batal</string>
+    <string name="cari">Cari</string>
+    <string name="cari_project">Cari project</string>
+    <string name="cari_tidak_ditemukan">Proyek tidak tersedia</string>
+    
+    <string name="proyek_akhir">Proyek Akhir</string>
+    <string name="proyek_tingkat_2">Proyek Tingkat 2</string>
+    <string name="proyek_tingkat_1">Proyek Tigkat 1</string>
 
     <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
 </resources>

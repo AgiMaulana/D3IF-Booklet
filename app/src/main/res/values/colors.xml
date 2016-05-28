@@ -14,7 +14,9 @@
     <color name="blueGrey_50">#ECEFF1</color>
     <color name="blue_300">#64B5F6</color>
     <color name="blue_700">#0288D1</color>
+    <color name="grey_200">#EEEEEE</color>
     <color name="grey_300">#E0E0E0</color>
+    <color name="grey_400_transparent_50">#7dbdbdbd</color>
     <color name="lightBlue_300_transparency_50">#7f4fc3f7</color>
     <color name="white">#FFFFFF</color>
 </resources>

@@ -32,6 +32,7 @@ import lab.agimaulana.d3ifbooklet.model.Project;
 import lab.agimaulana.d3ifbooklet.model.ProjectList;
 import lab.agimaulana.d3ifbooklet.model.Screenshot;
 import lab.agimaulana.d3ifbooklet.model.Student;
+import lab.agimaulana.d3ifbooklet.util.PicassoUtils;
 
 /**
  * Created by Agi Maulana on 4/19/2016.
@@ -81,9 +82,9 @@ public class ProjectSliderContentFragment extends Fragment implements View.OnCli
         }
         Project project = ProjectList.projects.get(position);
         getImagesUrl(project);
-        String posterUrl = "http://192.168.43.185/" + project.getPoster();
+        String posterUrl = "http://192.168.43.185:8000/" + project.getPoster();
         Log.d("Picasso - poster", posterUrl);
-        Picasso.with(getActivity()).load(Uri.parse(posterUrl)).into(imgPoster, new Callback() {
+        PicassoUtils.load(getActivity(), posterUrl, imgPoster, new PicassoUtils.LoadCallback() {
             @Override
             public void onSuccess() {
                 progressBarPoster.setVisibility(View.GONE);

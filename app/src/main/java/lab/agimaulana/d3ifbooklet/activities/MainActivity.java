@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +19,7 @@ import android.widget.Toast;
 import lab.agimaulana.d3ifbooklet.API.APIClient;
 import lab.agimaulana.d3ifbooklet.API.ServiceAdapter;
 import lab.agimaulana.d3ifbooklet.R;
+import lab.agimaulana.d3ifbooklet.dialogs.SearchDialogFragment;
 import lab.agimaulana.d3ifbooklet.model.Booklet;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -33,17 +36,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-       //         tesApi();
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         apiClient = ServiceAdapter.createService(APIClient.class);
     }
@@ -84,7 +76,8 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_search) {
+            new SearchDialogFragment().show(getSupportFragmentManager(), getString(R.string.cari_project));
             return true;
         }
 

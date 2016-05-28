@@ -11,7 +11,8 @@ import java.util.List;
  */
 @Root(name = "booklet")
 public class Booklet {
-    @ElementList(inline = true)
+
+    @ElementList(entry = "project", inline = true)
     private List<Project> projects = new ArrayList<>();
 
     public List<Project> getProjects() {

@@ -6,7 +6,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/ic_play_circle_filled_white_48dp"/>
+            android:src="@drawable/ic_play_arrow_white_48dp"/>
     </item>
 
 </layer-list>

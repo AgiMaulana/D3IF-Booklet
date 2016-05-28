@@ -1,12 +1,18 @@
 package lab.agimaulana.d3ifbooklet.model;
 
 import org.simpleframework.xml.Element;
+import org.simpleframework.xml.Root;
+
+import java.io.Serializable;
 
 /**
  * Created by Agi Maulana on 4/13/2016.
  */
-@Element(name = "project")
-public class Project {
+@Root
+public class Project implements Serializable {
+    @Element(name = "tingkat")
+    private String level;
+
     @Element(name = "judul")
     private String title;
 

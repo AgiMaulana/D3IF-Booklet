@@ -1,7 +1,9 @@
 package lab.agimaulana.d3ifbooklet.adapter;
 
+import android.content.Context;
 import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,20 +11,35 @@ import android.view.ViewGroup;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import lab.agimaulana.d3ifbooklet.R;
+import lab.agimaulana.d3ifbooklet.model.Booklet;
 import lab.agimaulana.d3ifbooklet.model.Project;
 import lab.agimaulana.d3ifbooklet.model.ProjectList;
 import lab.agimaulana.d3ifbooklet.model.viewholder.ProjectItemViewHolder;
+import lab.agimaulana.d3ifbooklet.util.PicassoUtils;
+import lab.agimaulana.d3ifbooklet.util.Utils;
 
 /**
  * Created by Agi Maulana on 4/13/2016.
  */
-public class RecyclerProjectList extends RecyclerView.Adapter<ProjectItemViewHolder> implements View.OnClickListener {
-
+public class RecyclerProjectList extends RecyclerView.Adapter<ProjectItemViewHolder>{
     private String[] level = new String[]{"Proyek Tingkat I", "Proyek Tingkat II", "Proyek Akhir"};
     private int[] color = new int[]{R.color.amber_500, R.color.green_500, R.color.red_500};
     private OnItemClickListener mOnItemClickListener;
     private int position;
+    private List<Project> projects;
+
+    public RecyclerProjectList(Context context) throws Exception {
+        Booklet booklet = Utils.Booklet(context);
+        projects = new ArrayList<>();
+        projects = booklet.getProjects();
+        //projects.addAll(booklet.getProjects());
+    }
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener){
         this.mOnItemClickListener = onItemClickListener;
@@ -44,9 +61,10 @@ public class RecyclerProjectList extends RecyclerView.Adapter<ProjectItemViewHol
     @Override
     public void onBindViewHolder(final ProjectItemViewHolder holder, int position) {
         this.position = position;
-        Project project = ProjectList.projects.get(position);
-        String url = "http://192.168.43.185/" + project.getPoster();
-        Picasso.with(holder.itemView.getContext()).load(Uri.parse(url)).into(holder.getImageField(), new Callback() {
+//        Project project = ProjectList.projects.get(position);
+        final Project project = projects.get(position);
+        String url = project.getPoster();
+        PicassoUtils.load(holder.itemView.getContext(), url, holder.getImageField(), new PicassoUtils.LoadCallback() {
             @Override
             public void onSuccess() {
                 holder.getProgressBar().setVisibility(View.GONE);
@@ -73,7 +91,7 @@ public class RecyclerProjectList extends RecyclerView.Adapter<ProjectItemViewHol
             @Override
             public void onClick(View v) {
                 if(mOnItemClickListener != null)
-                    mOnItemClickListener.onClick(v, holder.getLayoutPosition());
+                    mOnItemClickListener.onClick(v, holder.getLayoutPosition(), project);
             }
         });
 
@@ -81,7 +99,7 @@ public class RecyclerProjectList extends RecyclerView.Adapter<ProjectItemViewHol
 
     @Override
     public int getItemCount() {
-        return ProjectList.projects.size();
+        return projects.size();
     }
 
     @Override
@@ -92,13 +110,7 @@ public class RecyclerProjectList extends RecyclerView.Adapter<ProjectItemViewHol
         return 1;
     }
 
-    @Override
-    public void onClick(View v) {
-        if(mOnItemClickListener != null)
-            mOnItemClickListener.onClick(v, position);
-    }
-
     public interface OnItemClickListener{
-        void onClick(View v, int position);
+        void onClick(View v, int position, Project project);
     }
 }

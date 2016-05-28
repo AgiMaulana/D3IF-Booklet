@@ -18,6 +18,7 @@ package lab.agimaulana.d3ifbooklet.activities;
         import android.widget.ProgressBar;
         import android.widget.RelativeLayout;
         import android.widget.TextView;
+        import android.widget.Toast;
 
         import com.squareup.picasso.Callback;
         import com.squareup.picasso.Picasso;
@@ -36,6 +37,8 @@ package lab.agimaulana.d3ifbooklet.activities;
         import lab.agimaulana.d3ifbooklet.model.ProjectList;
         import lab.agimaulana.d3ifbooklet.model.Screenshot;
         import lab.agimaulana.d3ifbooklet.model.Student;
+        import lab.agimaulana.d3ifbooklet.util.PicassoUtils;
+        import lab.agimaulana.d3ifbooklet.util.Utils;
 
 /**
  * Created by Agi Maulana on 4/14/2016.
@@ -51,6 +54,7 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
     private RecyclerView recyclerDevelopers;
     private RecyclerView recyclerPreceptors;
     private ArrayList<String> imageUrls = new ArrayList<>();
+    private Project project;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -62,7 +66,10 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_deep_orange_500_36dp);
         getSupportActionBar().setTitle("");
         setupWidget();
-        displayData();
+
+        project = (Project) getIntent().getSerializableExtra("project");
+        if(project != null)
+            displayData(project);
     }
 
     private void setupWidget(){
@@ -82,17 +89,12 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
         recyclerPreceptors.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    private void displayData(){
-        int position = getIntent().getIntExtra("position", -1);
-        if(position < 0){
-            startActivity(new Intent(this, MainActivity.class));
-            return;
-        }
-        Project project = ProjectList.projects.get(position);
+    private void displayData(Project project){
+        //Project project = ProjectList.projects.get(position);
         getImagesUrl(project);
         String videoThumbnail = "http://img.youtube.com/vi/" + project.getVideo() + "/hqdefault.jpg";
         Log.d("Picasso - poster", videoThumbnail);
-        Picasso.with(this).load(Uri.parse(videoThumbnail)).into(imgPoster, new Callback() {
+        PicassoUtils.load(this, videoThumbnail, imgPoster, new PicassoUtils.LoadCallback() {
             @Override
             public void onSuccess() {
                 layoutVideoButton.setVisibility(View.VISIBLE);
@@ -134,9 +136,9 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
     }
 
     private void getImagesUrl(Project project){
-        imageUrls.add("http://192.168.43.185/" + project.getPoster());
+        imageUrls.add(project.getPoster());
         for(Screenshot sc : project.getScreenshots().getScreenshots())
-            imageUrls.add("http://192.168.43.185/" + sc.getURL());
+            imageUrls.add(sc.getURL());
     }
 
     @Override
@@ -147,8 +149,13 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
             startActivity(new Intent(this, MainActivity.class));
             return;
         }
-        Project project = ProjectList.projects.get(position);
-        openYoutubeVideo(project.getVideo());
+
+        try {
+            Project project = Utils.Booklet(this).getProjects().get(position);
+            openYoutubeVideo(project.getVideo());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

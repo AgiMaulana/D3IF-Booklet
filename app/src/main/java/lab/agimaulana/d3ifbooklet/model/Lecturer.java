@@ -3,11 +3,13 @@ package lab.agimaulana.d3ifbooklet.model;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
+import java.io.Serializable;
+
 /**
  * Created by Agi Maulana on 4/13/2016.
  */
 @Root(name = "dosen")
-public class Lecturer {
+public class Lecturer implements Serializable {
     @Element(name = "nip")
     private String NIP;
 

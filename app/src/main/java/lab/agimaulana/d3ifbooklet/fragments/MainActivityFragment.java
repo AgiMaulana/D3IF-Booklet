@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,7 +48,7 @@ public class MainActivityFragment extends Fragment implements GetBooklet.FetchLi
         super.onActivityCreated(savedInstanceState);
         setupWidget();
         recyclerView.setVisibility(View.GONE);
-        getBooklet = new GetBooklet(this);
+        getBooklet = new GetBooklet(getActivity(), this);
         getBooklet.execute();
     }
 
@@ -69,39 +70,36 @@ public class MainActivityFragment extends Fragment implements GetBooklet.FetchLi
     }
 
     private void setupList(){
-        projectAdapter = new RecyclerProjectList();
-        projectAdapter.setOnItemClickListener(this);
-        recyclerView.setAdapter(projectAdapter);
-        progressBar.setVisibility(View.GONE);
-        recyclerView.setVisibility(View.VISIBLE);
-    }
-
-
-    @Override
-    public void onResponse(Response<Booklet> response) {
-        if(response.isSuccessful()){
-            if(response.body().getProjects().size() == 0)
-                Toast.makeText(getActivity(), "000000000000000000", Toast.LENGTH_SHORT).show();
-            else
-                setupList();
-        }else{
-            try {
-                Toast.makeText(getActivity(), response.errorBody().string(), Toast.LENGTH_SHORT).show();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        try {
+            projectAdapter = new RecyclerProjectList(getActivity());
+            projectAdapter.setOnItemClickListener(this);
+            recyclerView.setAdapter(projectAdapter);
+            progressBar.setVisibility(View.GONE);
+            recyclerView.setVisibility(View.VISIBLE);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
     @Override
-    public void onFailure(Throwable t) {
+    public void onSuccess() {
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                setupList();
+            }
+        });
+    }
+
+    @Override
+    public void onError(Throwable t) {
         Toast.makeText(getActivity(), t.getMessage(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
-    public void onClick(View v, int position) {
+    public void onClick(View v, int position, Project project) {
         Intent intent = new Intent(getActivity(), ViewProjectActivity2.class);
-        intent.putExtra("position", position);
+        intent.putExtra("project", project);
         startActivity(intent);
     }
 }

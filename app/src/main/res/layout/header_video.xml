@@ -12,13 +12,13 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/video_gradient">
+        android:layout_height="match_parent">
 
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/ic_play_circle_filled_white_48dp"
+            android:background="@drawable/black_transparent_circular"
+            android:src="@drawable/ic_play_arrow_white_48dp"
             android:layout_centerInParent="true"/>
 
     </RelativeLayout>

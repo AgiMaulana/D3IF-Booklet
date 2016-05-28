@@ -39,4 +39,12 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
 
+    <style name="dialog_fade">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="recyle_fade_out">
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
 </resources>
