@@ -20,8 +20,12 @@ import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
+import lab.agimaulana.d3ifbooklet.config.BookletConfig;
+import lab.agimaulana.d3ifbooklet.config.BookletType;
+import lab.agimaulana.d3ifbooklet.config.Preference;
 import lab.agimaulana.d3ifbooklet.model.Booklet;
 import lab.agimaulana.d3ifbooklet.model.Project;
+import lab.agimaulana.d3ifbooklet.model.Version;
 
 /**
  * Created by root on 5/13/16.
@@ -73,42 +77,18 @@ public class Utils {
         }).start();
     }
 
-    public static void saveToExternalImageDir(final Context context, final String filename, final Drawable drawable){
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                Bitmap bitmap = drawableToBitmap(drawable);
-                File dir = new File(context.getFilesDir()+"/images");
-                File file = new File(dir.getAbsolutePath(), filename);
-                try {
-                    if(!dir.exists())
-                        dir.mkdir();
-                    if(!file.exists())
-                        file.createNewFile();
-
-                    FileOutputStream fos = new FileOutputStream(file);
-                    bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
-                    fos.flush();
-                    fos.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-    }
-
     public static File getImageFileFromInternal(Context context, String filename){
         File dir = new File(context.getFilesDir()+"/images");
         File file = new File(dir.getAbsolutePath(), filename);
         return file;
     }
 
-    public static void saveBookletXml(final Context context, final InputStream inputStream){
+    public static void saveToInternalStorage(final Context context, final String fileName, final InputStream inputStream){
         new Thread(new Runnable() {
             @Override
             public void run() {
                 File dir = context.getFilesDir();
-                File file = new File(dir.getAbsolutePath(), "Booklet.xml");
+                File file = new File(dir.getAbsolutePath(), fileName);
                 try {
                     file.createNewFile();
                     FileOutputStream fos = new FileOutputStream(file);
@@ -125,34 +105,59 @@ public class Utils {
         }).start();
     }
 
-    public static Booklet Booklet(Context context) throws Exception {
-        File file = new File(context.getFilesDir().getAbsolutePath() , "Booklet.xml");
+    public static void objectToXML(Context context, String fileName, Object o) throws Exception {
+        File file = new File(context.getFilesDir().getAbsolutePath(), fileName);
         if(!file.exists())
-            throw new Exception("Booklet.xml not found");
+            file.createNewFile();
+
         Serializer serializer = new Persister();
-        Booklet booklet = serializer.read(Booklet.class, file);
-        return booklet;
+        serializer.write(o, file);
+    }
+
+    public static Version BookletVersion(Context context) throws Exception{
+        File file = new File(context.getFilesDir().getAbsolutePath(), BookletConfig.FILE_VERSION);
+        if(!file.exists())
+            throw new Exception(BookletConfig.FILE_VERSION + "not found");
+        Serializer serializer = new Persister();
+        return serializer.read(Version.class, file);
+    }
+
+    public static Booklet Booklet(Context context, String bookletName) throws Exception {
+        File file = new File(context.getFilesDir().getAbsolutePath() , bookletName);
+        if(!file.exists())
+            throw new Exception(bookletName + " not found");
+        Serializer serializer = new Persister();
+        return serializer.read(Booklet.class, file);
     }
 
     public static class SearchProject extends AsyncTask{
         String keyword;
-        final Booklet booklet;
+        final ArrayList<Booklet> booklets;
         final ArrayList<Project> result;
         private OnGetResult onGetResult;
 
         public SearchProject(Context context, String keyword, OnGetResult onGetResult) throws Exception {
             this.keyword = keyword.toLowerCase();
-            booklet = Booklet(context);
+            booklets = new ArrayList<>();
+            if(Preference.getSearchSetting(context, BookletType.PT1))
+                booklets.add(Booklet(context, BookletConfig.FILE_BOOKLET_PT1));
+            if(Preference.getSearchSetting(context, BookletType.PT2))
+                booklets.add(Booklet(context, BookletConfig.FILE_BOOKLET_PT2));
+            if(Preference.getSearchSetting(context, BookletType.PA))
+                booklets.add(Booklet(context, BookletConfig.FILE_BOOKLET_PA));
+
             result = new ArrayList<>();
             this.onGetResult = onGetResult;
         }
 
         @Override
         protected Object doInBackground(Object[] params) {
-            for (int i = 0; i < booklet.getProjects().size(); i++) {
-                Project project = booklet.getProjects().get(i);
-                if(project.getTitle().toLowerCase().contains(keyword))
-                    result.add(project);
+            for (Booklet booklet : booklets){
+                for (int i = 0; i < booklet.getProjects().size(); i++) {
+                    Project project = booklet.getProjects().get(i);
+                    if(project.getTitle().toLowerCase().contains(keyword))
+                        result.add(project);
+                }
             }
             return null;
         }

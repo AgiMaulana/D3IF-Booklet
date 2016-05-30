@@ -1,34 +1,25 @@
 package lab.agimaulana.d3ifbooklet.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import lab.agimaulana.d3ifbooklet.API.APIClient;
-import lab.agimaulana.d3ifbooklet.API.ServiceAdapter;
 import lab.agimaulana.d3ifbooklet.R;
+import lab.agimaulana.d3ifbooklet.animation.ProjectListPagerAdapter;
+import lab.agimaulana.d3ifbooklet.config.BookletConfig;
 import lab.agimaulana.d3ifbooklet.dialogs.SearchDialogFragment;
-import lab.agimaulana.d3ifbooklet.model.Booklet;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import lab.agimaulana.d3ifbooklet.fragments.ProjectListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-    private SwipeRefreshLayout refreshLayout;
-    private APIClient apiClient;
+    private ViewPager viewPager;
+    private TabLayout tabLayout;
+    private ProjectListPagerAdapter pagerAdapter;
+    private SearchDialogFragment searchDialogFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,30 +27,59 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        pagerAdapter = new ProjectListPagerAdapter(getSupportFragmentManager());
+        setupViewPager();
 
-        apiClient = ServiceAdapter.createService(APIClient.class);
+        tabLayout = (TabLayout) findViewById(R.id.tablayout);
+        tabLayout.setupWithViewPager(viewPager);
+        searchDialogFragment = new SearchDialogFragment();
     }
 
-    private void tesApi(){
-        Call<Booklet> booklet = apiClient.getProjects();
-        booklet.enqueue(new Callback<Booklet>() {
+    private ProjectListFragment createProjectFragment(String bookletType){
+        Bundle bundle = new Bundle();
+        bundle.putString("bookletType", bookletType);
+        ProjectListFragment fragment = new ProjectListFragment();
+        fragment.setArguments(bundle);
+
+        return fragment;
+    }
+
+    private void setupViewPager(){
+        pagerAdapter.addFragment(getString(R.string.pt1), createProjectFragment(BookletConfig.FILE_BOOKLET_PT1));
+        pagerAdapter.addFragment(getString(R.string.pt2), createProjectFragment(BookletConfig.FILE_BOOKLET_PT2));
+        pagerAdapter.addFragment(getString(R.string.pa), createProjectFragment(BookletConfig.FILE_BOOKLET_PA));
+        viewPager.setAdapter(pagerAdapter);
+
+        final String[] titles = new String[]{
+                getString(R.string.proyek_tingkat_1),
+                getString(R.string.proyek_tingkat_2),
+                getString(R.string.proyek_akhir)
+        };
+        if(getSupportActionBar() != null)
+            getSupportActionBar().setTitle(titles[0]);
+
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
-            public void onResponse(Call<Booklet> call, Response<Booklet> response) {
-                Log.d("Ini responsenya", response.raw().message());
-                if(response.body().getProjects().size() > 0) {
-                    Toast.makeText(MainActivity.this, "Data BERHASIL dimuat", Toast.LENGTH_LONG).show();
-                }else {
-                    Toast.makeText(MainActivity.this, "Data GAGAL dimuat", Toast.LENGTH_LONG).show();
-                }
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
             }
 
+            @Override
+            public void onPageSelected(int position) {
+                if(getSupportActionBar() != null)
+                    getSupportActionBar().setTitle(titles[position]);
+            }
 
             @Override
-            public void onFailure(Call<Booklet> call, Throwable t) {
-                Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+            public void onPageScrollStateChanged(int state) {
+
             }
         });
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -76,11 +96,20 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_search) {
-            new SearchDialogFragment().show(getSupportFragmentManager(), getString(R.string.cari_project));
-            return true;
+        switch (id){
+            case R.id.action_search:
+                new SearchDialogFragment().show(getSupportFragmentManager(), getString(R.string.cari_project));
+                //searchDialogFragment.show(getSupportFragmentManager(), getString(R.string.cari_project));
+                break;
+            case R.id.action_setting:
+                startActivity(new Intent(this, SettingVersionActivity.class));
+                break;
+            case R.id.action_about:
+                startActivity(new Intent(this, AboutActivity.class));
+                break;
+            default:break;
         }
 
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 }

@@ -34,6 +34,10 @@ public class Project implements Serializable {
     @Element(name = "pembimbing")
     private Preceptors preceptors = new Preceptors();
 
+    public String getLevel() {
+        return level;
+    }
+
     public String getTitle() {
         return title;
     }

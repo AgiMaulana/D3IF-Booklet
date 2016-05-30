@@ -2,7 +2,8 @@
 <resources>
     <color name="colorPrimary">#2196F3</color>
     <color name="colorPrimaryDark">#1976D2</color>
-    <color name="colorAccent">#8BC34A</color>
+    <!--color name="colorAccent">#8BC34A</color-->
+    <color name="colorAccent">@color/deepOrange_500</color>
     <color name="textPrimary">#de000000</color>
     <color name="textSecondary">#8a000000</color>
     <color name="textHintAndDisabled">#61000000</color>
@@ -10,6 +11,8 @@
     <color name="deepOrange_500">#FF5722</color>
     <color name="red_500">#F44336</color>
     <color name="green_500">#4CAF50</color>
+    <color name="black_transparency_50">#7d000000</color>
+    <color name="black_transparency_75">#3e000000</color>
     <color name="amber_500">#FFC107</color>
     <color name="blueGrey_50">#ECEFF1</color>
     <color name="blue_300">#64B5F6</color>
@@ -19,4 +22,5 @@
     <color name="grey_400_transparent_50">#7dbdbdbd</color>
     <color name="lightBlue_300_transparency_50">#7f4fc3f7</color>
     <color name="white">#FFFFFF</color>
+    <color name="white_transparent_50">#7dffffff</color>
 </resources>

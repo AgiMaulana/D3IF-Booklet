@@ -59,6 +59,7 @@ public class RecyclerSearchProjectAdapter extends RecyclerView.Adapter<ProjectIt
         String title = project.getTitle();
         title = title.length() > 100 ? title.substring(0, 100) : title;
         holder.getTitleField().setText(title);
+        holder.getLevelField().setText(project.getLevel());
 
         final Context context = holder.itemView.getContext();
         holder.itemView.setOnClickListener(new View.OnClickListener() {

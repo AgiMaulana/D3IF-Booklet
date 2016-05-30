@@ -46,7 +46,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="5dp"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/red_500"
+            android:textColor="@color/deepOrange_500"
             android:text="Proyek Akhir"/>
 
         <android.support.v7.widget.AppCompatTextView

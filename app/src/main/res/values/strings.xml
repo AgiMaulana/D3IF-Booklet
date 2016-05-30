@@ -13,10 +13,32 @@
     <string name="cari">Cari</string>
     <string name="cari_project">Cari project</string>
     <string name="cari_tidak_ditemukan">Proyek tidak tersedia</string>
-    
+    <string name="error_connection">Tidak dapat mengunduh data.\nketuk disini untuk mencoba lagi.</string>
+    <string name="error_connection2">Tidak dapat mengunduh data</string>
+
+    <string name="pa">PA</string>
+    <string name="pt1">PT1</string>
+    <string name="pt2">PT2</string>
     <string name="proyek_akhir">Proyek Akhir</string>
     <string name="proyek_tingkat_2">Proyek Tingkat 2</string>
     <string name="proyek_tingkat_1">Proyek Tigkat 1</string>
 
+    <string name="versi">Versi</string>
+    <string name="versi_saat_ini">Versi %1$d</string>
+    <string name="perbarui_dokumen">Perbarui dokumen</string>
+    <string name="tersedia_versi_baru">Tersedia versi %1$d</string>
+    <string name="mengunduh_booklet">Mengunduh versi %1$d ....</string>
+    <string name="mengunduh">Mengunduh</string>
+    <string name="unduh">Unduh</string>
+    <string name="periksa_pembaruan">Periksa pembaruan</string>
+    <string name="tentang">Tentang</string>
+    <string name="versi_baru_tidak_tersedia">Pembaruan tidak tersedia. Versi yang sama tetap bisa di unduh.</string>
+    <string name="coba_lagi">Coba lagi</string>
+
+    <string name="deskripsi">Aplikasi pustaka karya D3 Teknik Informatika, Fakultas Ilmu Terapan, Telkom University.</string>
+    <string name="copyright">Copyright &#169; 2016</string>
+    <string name="copyright_team">D3 Teknik informatika, Telkom University</string>
+
     <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+    <string name="lorem_ipsum">Lorem ipsum</string>
 </resources>

@@ -28,14 +28,12 @@ import lab.agimaulana.d3ifbooklet.util.Utils;
  * Created by Agi Maulana on 4/13/2016.
  */
 public class RecyclerProjectList extends RecyclerView.Adapter<ProjectItemViewHolder>{
-    private String[] level = new String[]{"Proyek Tingkat I", "Proyek Tingkat II", "Proyek Akhir"};
-    private int[] color = new int[]{R.color.amber_500, R.color.green_500, R.color.red_500};
     private OnItemClickListener mOnItemClickListener;
     private int position;
     private List<Project> projects;
 
-    public RecyclerProjectList(Context context) throws Exception {
-        Booklet booklet = Utils.Booklet(context);
+    public RecyclerProjectList(Context context, String bookletName) throws Exception {
+        Booklet booklet = Utils.Booklet(context, bookletName);
         projects = new ArrayList<>();
         projects = booklet.getProjects();
         //projects.addAll(booklet.getProjects());
@@ -79,13 +77,7 @@ public class RecyclerProjectList extends RecyclerView.Adapter<ProjectItemViewHol
         String title = project.getTitle();
         title = title.length() > 100 ? title.substring(0, 100) : title;
         holder.getTitleField().setText(title);
-
-        if(position > 0) {
-            int i = 2;
-            holder.getLevelField().setText(level[i]);
-            holder.getLevelField().setTextColor(holder.getLevelField().getContext().getResources()
-            .getColor(color[i]));
-        }
+        holder.getLevelField().setText(project.getLevel());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

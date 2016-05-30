@@ -25,25 +25,29 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import lab.agimaulana.d3ifbooklet.R;
 import lab.agimaulana.d3ifbooklet.adapter.RecyclerProjectList;
 import lab.agimaulana.d3ifbooklet.adapter.RecyclerSearchProjectAdapter;
+import lab.agimaulana.d3ifbooklet.config.BookletConfig;
 import lab.agimaulana.d3ifbooklet.model.Project;
 import lab.agimaulana.d3ifbooklet.util.Utils;
 
 /**
  * Created by root on 5/27/16.
  */
-public class SearchDialogFragment extends AppCompatDialogFragment implements View.OnClickListener, TextView.OnEditorActionListener, View.OnTouchListener {
+public class SearchDialogFragment extends AppCompatDialogFragment implements View.OnClickListener, TextView.OnEditorActionListener, View.OnTouchListener, SearchSettingDialog.OnClickListener {
 
     private EditText etSearch;
     private RelativeLayout btnBack, btnClear, btnFilter;
     private ProgressBar progressBar;
     private RecyclerView recyclerView;
     private AppCompatTextView tvNotFound;
+
+    private SearchSettingDialog searchSettingDialog;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -69,11 +73,14 @@ public class SearchDialogFragment extends AppCompatDialogFragment implements Vie
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         initWidget();
+        searchSettingDialog = new SearchSettingDialog(getContext());
+        searchSettingDialog.setOnClickListener(this);
     }
 
     @Override
     public void onCancel(DialogInterface dialog) {
         showInputMethod(etSearch);
+        getDialog().getWindow().setSoftInputMode (WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         super.onCancel(dialog);
     }
 
@@ -82,7 +89,8 @@ public class SearchDialogFragment extends AppCompatDialogFragment implements Vie
         etSearch.requestFocus();
         etSearch.setOnTouchListener(this);
         etSearch.setOnEditorActionListener(this);
-        showInputMethod(etSearch);
+        //showInputMethod(etSearch);
+        getDialog().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
 
         btnBack = (RelativeLayout) getView().findViewById(R.id.button_back);
         btnBack.setOnClickListener(this);
@@ -132,15 +140,22 @@ public class SearchDialogFragment extends AppCompatDialogFragment implements Vie
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.button_back:
+                //showInputMethod(etSearch);
                 getDialog().cancel();
                 break;
             case R.id.button_clear:
                 etSearch.setText("");
                 etSearch.requestFocus();
-                showInputMethod(etSearch);
+                recyclerView.setVisibility(View.GONE);
+                tvNotFound.setVisibility(View.GONE);
+
+                if(btnFilter.getVisibility() == View.VISIBLE)
+                    showInputMethod(etSearch);
+
+                btnFilter.setVisibility(View.GONE);
                 break;
             case R.id.button_filter:
-                new SearchSettingDialog(getContext()).show();
+                searchSettingDialog.show();
                 break;
             default:break;
         }
@@ -195,7 +210,19 @@ public class SearchDialogFragment extends AppCompatDialogFragment implements Vie
     public boolean onTouch(View view, MotionEvent motionEvent) {
         if(view.getId() == R.id.edittext_search){
             btnFilter.setVisibility(View.GONE);
+            recyclerView.setVisibility(View.GONE);
+            tvNotFound.setVisibility(View.GONE);
         }
         return false;
+    }
+
+    @Override
+    public void onPositiveClicked() {
+        performSearch(etSearch.getText().toString());
+    }
+
+    @Override
+    public void onNegativeClicked() {
+
     }
 }

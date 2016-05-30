@@ -27,8 +27,8 @@ public class RecyclerCheckbox extends RecyclerView.Adapter<ItemCheckBox> {
         this.items = items;
     }
 
-    public void addItem(String text){
-        items.add(new Item(text));
+    public void addItem(String text, boolean checked){
+        items.add(new Item(text, checked));
     }
 
     public void setItems(ArrayList<Item> items) {
@@ -39,6 +39,10 @@ public class RecyclerCheckbox extends RecyclerView.Adapter<ItemCheckBox> {
         this.onCheckedChangeListener = onCheckedChangeListener;
     }
 
+    public ArrayList<Item> getItems(){
+        return items;
+    }
+
     @Override
     public ItemCheckBox onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
@@ -47,18 +51,20 @@ public class RecyclerCheckbox extends RecyclerView.Adapter<ItemCheckBox> {
     }
 
     @Override
-    public void onBindViewHolder(ItemCheckBox holder, int position) {
+    public void onBindViewHolder(ItemCheckBox holder, final int position) {
         holder.text.setText(items.get(position).text);
-        /*holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        holder.checkBox.setChecked(items.get(position).checked);
+        holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (onCheckedChangeListener != null)
                     onCheckedChangeListener.onCheckedChanged(position, isChecked);
+                items.get(position).checked = isChecked;
             }
         });
         OnClick onClick = new OnClick(holder.checkBox);
         holder.itemView.setOnClickListener(onClick);
-        holder.text.setOnClickListener(onClick);*/
+        holder.text.setOnClickListener(onClick);
     }
 
     @Override
@@ -81,9 +87,19 @@ public class RecyclerCheckbox extends RecyclerView.Adapter<ItemCheckBox> {
 
     public class Item{
         private String text;
+        private boolean checked;
 
-        public Item(String text) {
+        public Item(String text, boolean checked) {
             this.text = text;
+            this.checked = checked;
+        }
+
+        public String getText() {
+            return text;
+        }
+
+        public boolean isChecked() {
+            return checked;
         }
     }
 

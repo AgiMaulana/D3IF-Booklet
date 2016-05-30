@@ -13,20 +13,27 @@ import android.view.Window;
 
 import lab.agimaulana.d3ifbooklet.R;
 import lab.agimaulana.d3ifbooklet.adapter.RecyclerCheckbox;
+import lab.agimaulana.d3ifbooklet.config.BookletType;
+import lab.agimaulana.d3ifbooklet.config.Preference;
 
 /**
  * Created by root on 5/28/16.
  */
-public class SearchSettingDialog{
+public class SearchSettingDialog implements RecyclerCheckbox.OnCheckedChangeListener {
 
     private RecyclerView recyclerView;
     private RecyclerCheckbox adapter;
     private Context context;
     private AlertDialog alertDialog;
+    private OnClickListener onClickListener;
 
     public SearchSettingDialog(Context context) {
         this.context = context;
         setupDialog();
+    }
+
+    public void setOnClickListener(OnClickListener onClickListener) {
+        this.onClickListener = onClickListener;
     }
 
     private void setupDialog(){
@@ -35,12 +42,17 @@ public class SearchSettingDialog{
                 .setNegativeButton(R.string.batal, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        if(onClickListener != null)
+                            onClickListener.onNegativeClicked();
                     }
                 }).setPositiveButton(R.string.cari, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        for (RecyclerCheckbox.Item item : adapter.getItems())
+                            Preference.setSearchSetting(getContext(), item.getText(), item.isChecked());
 
+                        if(onClickListener != null)
+                            onClickListener.onPositiveClicked();
                     }
                 });
         alertDialog = builder.create();
@@ -50,6 +62,7 @@ public class SearchSettingDialog{
         View view = LayoutInflater.from(getContext())
                 .inflate(R.layout.dialog_search_option, null);
         adapter = new RecyclerCheckbox();
+        adapter.setOnCheckedChangeListener(this);
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
@@ -58,14 +71,9 @@ public class SearchSettingDialog{
     }
 
     private void setupContent(){
-        String[] options = new String[]{
-                getContext().getString(R.string.proyek_tingkat_1),
-                getContext().getString(R.string.proyek_tingkat_2),
-                getContext().getString(R.string.proyek_akhir)
-        };
-
-        for (String s : options)
-            adapter.addItem(s);
+        adapter.addItem(BookletType.PT1, Preference.getSearchSetting(getContext(), BookletType.PT1));
+        adapter.addItem(BookletType.PT2, Preference.getSearchSetting(getContext(), BookletType.PT2));
+        adapter.addItem(BookletType.PA, Preference.getSearchSetting(getContext(), BookletType.PA));
         adapter.notifyDataSetChanged();
     }
 
@@ -75,5 +83,16 @@ public class SearchSettingDialog{
 
     public void show(){
         alertDialog.show();
+    }
+
+    @Override
+    public void onCheckedChanged(int position, boolean isChecked) {
+//        String[] bookletType = new String[]{BookletType.PT1, BookletType.PT2, BookletType.PA};
+//        Preference.setSearchSetting(getContext(), bookletType[position], isChecked);
+    }
+
+    public interface OnClickListener{
+        void onPositiveClicked();
+        void onNegativeClicked();
     }
 }

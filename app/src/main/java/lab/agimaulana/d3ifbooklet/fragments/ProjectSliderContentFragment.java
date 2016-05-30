@@ -144,6 +144,6 @@ public class ProjectSliderContentFragment extends Fragment implements View.OnCli
 
     @Override
     public void onClick(View v, int position) {
-        openImageSlider(position+1);
+        openImageSlider(position);
     }
 }

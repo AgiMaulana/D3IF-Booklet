@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme"
         android:screenOrientation="portrait">
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.FirstRunActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -22,6 +22,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
         <activity
@@ -43,6 +50,31 @@
                 android:name="android.permission.PARENT_ACTIVITY"
                 android:value=".activites.MainActivity"/>
         </activity>
+
+        <activity android:name=".activities.SettingVersionActivity"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.permission.PARENT_ACTIVITY"
+                android:value=".activites.MainActivity"/>
+        </activity>
+
+        <activity android:name=".activities.UpdateVersionActivity"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".activities.SettingVersionActivity">
+            <meta-data
+                android:name="android.permission.PARENT_ACTIVITY"
+                android:value=".activites.SettingVersionActivity"/>
+        </activity>
+
+        <activity android:name=".activities.AboutActivity"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.permission.PARENT_ACTIVITY"
+                android:value=".activites.MainActivity"/>
+        </activity>
+
     </application>
 
 </manifest>

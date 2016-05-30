@@ -27,12 +27,13 @@ public class GetBooklet {
     private FetchListener listener;
     private Context context;
     private AlertDialog messageDialog;
+    private String fileName;
 
-    public  GetBooklet(Context context, FetchListener fetchListener){
+    public  GetBooklet(Context context, String url, String fileName){
         //this.apiClient = ServiceAdapter.createService(APIClient.class);
-        downloadManager = new DownloadManager(ServiceAdapter.BOOKLET_XML_URL);
-        this.listener = fetchListener;
+        downloadManager = new DownloadManager(url);
         this.context = context;
+        this.fileName = fileName;
 
         messageDialog = new AlertDialog.Builder(context)
                 .setTitle("Error")
@@ -45,28 +46,14 @@ public class GetBooklet {
                 }).create();
     }
 
+    public void setListener(FetchListener listener) {
+        this.listener = listener;
+    }
+
     public void execute(){
-        /*Call<Booklet> booklet = apiClient.getProjects();
-        booklet.enqueue(new Callback<Booklet>() {
-            @Override
-            public void onResponse(Call<Booklet> call, Response<Booklet> response) {
-                if(response.isSuccessful())
-                    ProjectList.projects = response.body().getProjects();
-                if (listener != null)
-                    listener.onResponse(response);
-            }
-
-
-            @Override
-            public void onFailure(Call<Booklet> call, Throwable t) {
-                if(listener != null)
-                    listener.onFailure(t);
-            }
-        });*/
         downloadManager.execute(new DownloadManager.DownloadCallback() {
             @Override
             public void onFailuer(IOException e) {
-                showDialog();
                 Log.e("GetBooklet", e.getMessage());
 
                 if(listener != null)
@@ -77,28 +64,20 @@ public class GetBooklet {
             public void onResponse(okhttp3.Response response) {
                 if(response.isSuccessful()) {
                     try {
-                        Utils.saveBookletXml(context, response.body().byteStream());
+                        Utils.saveToInternalStorage(context, fileName, response.body().byteStream());
                         if (listener != null)
                             listener.onSuccess();
                         Log.d("ByteStream Size", String.valueOf(response.body().byteStream().available()));
                     }catch (IOException e){
-                        e.printStackTrace();
+                        if(listener != null)
+                            listener.onError(e);
                     }
                 }else {
-                    showDialog();
+                    if(listener != null)
+                        listener.onError(new IOException());
                 }
             }
         });
-    }
-
-    private void showDialog(){
-        new Handler(context.getMainLooper())
-                .post(new Runnable() {
-                    @Override
-                    public void run() {
-                        messageDialog.show();
-                    }
-                });
     }
 
     public interface FetchListener{
