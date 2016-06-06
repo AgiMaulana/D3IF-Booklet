@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<booklet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<booklet>
   <!-- PROYEK AKHIR -->
     <project>
        <tingkat>Proyek Akhir</tingkat>
@@ -8,10 +8,7 @@
        <poster>http://192.168.43.185:8000/poster.png</poster>
        <video>nk0dkvGCqpk</video>
        <screenshots>
-          <screenshot>http://192.168.43.185:8000/poster.png</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
+           <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
        </screenshots>
        <developer>
           <mahasiswa>
@@ -41,10 +38,7 @@
        <poster>http://192.168.43.185:8000/poster.png</poster>
        <video>JyT8q8Qfy2s</video>
        <screenshots>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
+           <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
        </screenshots>
        <developer>
           <mahasiswa>
@@ -78,10 +72,7 @@
        <poster>http://192.168.43.185:8000/poster.png</poster>
        <video>uC0hHSEuQe0</video>
        <screenshots>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
+           <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
        </screenshots>
        <developer>
           <mahasiswa>
@@ -115,10 +106,7 @@
        <poster>http://192.168.43.185:8000/poster.png</poster>
        <video>HHc3ov8BVxo</video>
        <screenshots>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
+           <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
        </screenshots>
        <developer>
           <mahasiswa>
@@ -152,10 +140,7 @@
        <poster>http://192.168.43.185:8000/poster.png</poster>
        <video>PCgsWzVo4wE</video>
        <screenshots>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
+           <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
        </screenshots>
        <developer>
           <mahasiswa>
@@ -189,10 +174,7 @@
        <poster>http://192.168.43.185:8000/poster.png</poster>
        <video>sByxMirDtEE</video>
        <screenshots>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
+           <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
        </screenshots>
        <developer>
           <mahasiswa>
@@ -222,10 +204,7 @@
        <poster>http://192.168.43.185:8000/poster.png</poster>
        <video>VAv8bZce_m0</video>
        <screenshots>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
+           <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
        </screenshots>
        <developer>
           <mahasiswa>
@@ -259,10 +238,7 @@
        <poster>http://192.168.43.185:8000/poster.png</poster>
        <video>G6lRDj-fgzQ</video>
        <screenshots>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
-          <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
+           <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
        </screenshots>
        <developer>
           <mahasiswa>

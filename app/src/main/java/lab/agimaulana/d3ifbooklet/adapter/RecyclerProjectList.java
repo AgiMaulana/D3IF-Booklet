@@ -32,11 +32,9 @@ public class RecyclerProjectList extends RecyclerView.Adapter<ProjectItemViewHol
     private int position;
     private List<Project> projects;
 
-    public RecyclerProjectList(Context context, String bookletName) throws Exception {
-        Booklet booklet = Utils.Booklet(context, bookletName);
+    public RecyclerProjectList(Booklet booklet){
         projects = new ArrayList<>();
         projects = booklet.getProjects();
-        //projects.addAll(booklet.getProjects());
     }
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener){

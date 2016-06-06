@@ -1,4 +1,4 @@
-package lab.agimaulana.d3ifbooklet.model;
+package lab.agimaulana.d3ifbooklet.util;
 
 import android.content.Context;
 import android.content.DialogInterface;

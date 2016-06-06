@@ -8,14 +8,11 @@ import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import java.io.File;
-
 import lab.agimaulana.d3ifbooklet.R;
 import lab.agimaulana.d3ifbooklet.config.BookletConfig;
 import lab.agimaulana.d3ifbooklet.config.BookletType;
 import lab.agimaulana.d3ifbooklet.config.Preference;
-import lab.agimaulana.d3ifbooklet.model.Booklet;
-import lab.agimaulana.d3ifbooklet.model.GetBooklet;
+import lab.agimaulana.d3ifbooklet.util.GetBooklet;
 
 /**
  * Created by root on 5/29/16.

@@ -4,13 +4,14 @@
     android:layout_height="250dp"
     android:fitsSystemWindows="true"
     android:layout_marginBottom="4dp"
-    android:background="#E0E0E0">
+    android:background="#E0E0E0"
+    style="@style/dialog_fade">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@color/blue_700"
+        android:background="@color/blue_700"
         android:id="@+id/imageview_poster"/>
 
     <ProgressBar
@@ -18,8 +19,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/progressbar"
         android:layout_centerInParent="true"
-        android:indeterminate="true"
-        style="?android:attr/progressBarStyleLarge"/>
+        android:indeterminate="true"/>
 
     <LinearLayout
         android:orientation="vertical"

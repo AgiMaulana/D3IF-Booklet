@@ -13,6 +13,7 @@ import lab.agimaulana.d3ifbooklet.animation.ProjectListPagerAdapter;
 import lab.agimaulana.d3ifbooklet.config.BookletConfig;
 import lab.agimaulana.d3ifbooklet.dialogs.SearchDialogFragment;
 import lab.agimaulana.d3ifbooklet.fragments.ProjectListFragment;
+import lab.agimaulana.d3ifbooklet.util.Cache;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+        Cache.clearCache(this);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         pagerAdapter = new ProjectListPagerAdapter(getSupportFragmentManager());
         setupViewPager();
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPageScrollStateChanged(int state) {
-
+                ((ProjectListFragment)pagerAdapter.getItem(viewPager.getCurrentItem())).hideFab();
             }
         });
     }
@@ -102,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                 //searchDialogFragment.show(getSupportFragmentManager(), getString(R.string.cari_project));
                 break;
             case R.id.action_setting:
-                startActivity(new Intent(this, SettingVersionActivity.class));
+                startActivity(new Intent(this, SettingActivity.class));
                 break;
             case R.id.action_about:
                 startActivity(new Intent(this, AboutActivity.class));

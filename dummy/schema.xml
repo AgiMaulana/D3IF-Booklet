@@ -1,0 +1,75 @@
+<!-- PT 1-->
+
+<project>
+    <tingkat>Proyek Tingkat 1</tingkat>
+    <judul></judul>
+    <deskripsi></deskripsi>
+    <poster>http://192.168.43.185:8000/poster.png</poster>
+    <video>VAv8bZce_m0</video> <!-- default -->
+    <screenshots>
+        <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
+        <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
+        <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
+        <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
+    </screenshots>
+    <developer>
+        <mahasiswa>
+            <nim>670615</nim>
+            <nama></nama>
+        </mahasiswa>
+        <mahasiswa>
+            <nim>670615</nim>
+            <nama></nama>
+        </mahasiswa>
+        <mahasiswa>
+            <nim>670615</nim>
+            <nama></nama>
+        </mahasiswa>
+        <mahasiswa>
+            <nim>670615</nim>
+            <nama></nama>
+        </mahasiswa>
+    </developer>
+    <pembimbing>
+        <dosen>
+            <nip>0</nip>
+            <nama>Irman Hariman, S.T., M.T.</nama>
+        </dosen>
+    </pembimbing>
+</project>
+
+<!-- PT 2 -->
+
+<project>
+<tingkat>Proyek Tingkat 2</tingkat>
+<judul></judul>
+<deskripsi></deskripsi>
+<poster>http://192.168.43.185:8000/poster.png</poster>
+<video>VAv8bZce_m0</video> <!-- default -->
+<screenshots>
+    <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
+    <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
+    <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
+    <screenshot>http://192.168.43.185:8000/airbnb.jpg</screenshot>
+</screenshots>
+<developer>
+    <mahasiswa>
+        <nim>670614</nim>
+        <nama></nama>
+    </mahasiswa>
+    <mahasiswa>
+        <nim>670614</nim>
+        <nama></nama>
+    </mahasiswa>
+    <mahasiswa>
+        <nim>670614</nim>
+        <nama></nama>
+    </mahasiswa>
+</developer>
+<pembimbing>
+    <dosen>
+        <nip>0</nip>
+        <nama>Irman Hariman, S.T., M.T.</nama>
+    </dosen>
+</pembimbing>
+</project>

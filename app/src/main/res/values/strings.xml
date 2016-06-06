@@ -2,7 +2,7 @@
     <string name="YOUTUBE_KEY">AIzaSyBOfEZyQBkYytBw-Ivm3mzhT69xuU_-QLM</string>
 
     <string name="app_name">D3IF Booklet</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Pengaturan</string>
     <string name="project_example_title">TooLips Words and Sentences Learning Application for Hearing Impirred Children</string>
     <string name="project_example_description">TooLips merupakan aplikasi pembelajaran pada platform Android yang dibuat untuk anak tunarungu melalui penyampaian materi yang menarik yaitu dengan menggunakan media gambar, tulisan, suara, dan video yang akan melatih kemampuan berbahasa dan daya ingat anak tunarungu. Aplikasi ini dibuat dengan prinsip-prinsip pembelajaran khusus bagi anak tunarungu seperti keterarahwajahan yaitu melalui video, keterarahsuaraan melalui suara/audio, visualisasi yaitu melalui gambar tulisan, serta prinsip pembelajaran khusus lainnya.</string>
     <string name="pembimbing">Pembimbing</string>
@@ -30,10 +30,16 @@
     <string name="mengunduh_booklet">Mengunduh versi %1$d ....</string>
     <string name="mengunduh">Mengunduh</string>
     <string name="unduh">Unduh</string>
+    <string name="pembaruan">Pembaruan</string>
     <string name="periksa_pembaruan">Periksa pembaruan</string>
     <string name="tentang">Tentang</string>
     <string name="versi_baru_tidak_tersedia">Pembaruan tidak tersedia. Versi yang sama tetap bisa di unduh.</string>
     <string name="coba_lagi">Coba lagi</string>
+
+    <string name="periksa_skema">Periksa skema</string>
+    <string name="memeriksa">Memeriksa....</string>
+    <string name="skema_valid">Skema valid</string>
+    <string name="skema_error">Error : %1$s</string>
 
     <string name="deskripsi">Aplikasi pustaka karya D3 Teknik Informatika, Fakultas Ilmu Terapan, Telkom University.</string>
     <string name="copyright">Copyright &#169; 2016</string>
@@ -41,4 +47,5 @@
 
     <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
     <string name="lorem_ipsum">Lorem ipsum</string>
+    <string name="lorem_ipsum_long">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</string>
 </resources>

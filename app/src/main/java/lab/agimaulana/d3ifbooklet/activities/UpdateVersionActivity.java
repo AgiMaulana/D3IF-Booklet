@@ -17,7 +17,8 @@ import lab.agimaulana.d3ifbooklet.API.ServiceAdapter;
 import lab.agimaulana.d3ifbooklet.R;
 import lab.agimaulana.d3ifbooklet.config.BookletConfig;
 import lab.agimaulana.d3ifbooklet.model.BookletVersion;
-import lab.agimaulana.d3ifbooklet.model.GetBooklet;
+import lab.agimaulana.d3ifbooklet.util.Cache;
+import lab.agimaulana.d3ifbooklet.util.GetBooklet;
 import lab.agimaulana.d3ifbooklet.model.Version;
 import lab.agimaulana.d3ifbooklet.util.Utils;
 import retrofit2.Callback;
@@ -115,6 +116,7 @@ public class UpdateVersionActivity extends AppCompatActivity implements View.OnC
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        Cache.clearCache(getApplicationContext());
                         Toast.makeText(UpdateVersionActivity.this, "Berhasil diunduh", Toast.LENGTH_SHORT).show();
                         tvNewVersion.setVisibility(View.INVISIBLE);
                         progressDownload.setVisibility(View.GONE);
@@ -153,7 +155,6 @@ public class UpdateVersionActivity extends AppCompatActivity implements View.OnC
     public void onResponse(retrofit2.Call<Version> call, Response<Version> response) {
         if(response.isSuccessful()){
             progressCheckVersion.setVisibility(View.GONE);
-
             BookletVersion b = response.body().getBookletVersions().get(position);
             tvNewVersion.setText(getString(R.string.tersedia_versi_baru, b.getVersion()));
             tvNewVersion.setVisibility(View.VISIBLE);
@@ -163,6 +164,7 @@ public class UpdateVersionActivity extends AppCompatActivity implements View.OnC
 
     @Override
     public void onFailure(retrofit2.Call<Version> call, Throwable t) {
+        progressDownload.setVisibility(View.GONE);
         Toast.makeText(UpdateVersionActivity.this, "Tidak dapat memerika. Coba lagi nanti.", Toast.LENGTH_SHORT).show();
     }
 }

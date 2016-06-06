@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
@@ -19,7 +21,7 @@ import lab.agimaulana.d3ifbooklet.util.Utils;
 /**
  * Created by root on 5/30/16.
  */
-public class SettingVersionActivity extends AppCompatActivity implements RecyclerVersionSettingAdapter.OnOptionsSelectedListener {
+public class SettingActivity extends AppCompatActivity implements RecyclerVersionSettingAdapter.OnOptionsSelectedListener, View.OnClickListener {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,6 +37,8 @@ public class SettingVersionActivity extends AppCompatActivity implements Recycle
             RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             recyclerView.setAdapter(adapter);
+
+            ((LinearLayout) findViewById(R.id.button_check_schema)).setOnClickListener(this);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -45,5 +49,10 @@ public class SettingVersionActivity extends AppCompatActivity implements Recycle
         Intent intent = new Intent(this, UpdateVersionActivity.class);
         intent.putExtra("position", position);
         startActivity(intent);
+    }
+
+    @Override
+    public void onClick(View view) {
+        startActivity(new Intent(this, SchemaValidationActivity.class));
     }
 }

@@ -13,7 +13,7 @@
         <item
             android:id="@+id/action_setting"
             android:orderInCategory="100"
-            android:title="@string/perbarui_dokumen"
+            android:title="@string/action_settings"
             app:showAsAction="never" />
 
         <item

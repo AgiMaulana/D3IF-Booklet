@@ -51,8 +51,9 @@
                 android:value=".activites.MainActivity"/>
         </activity>
 
-        <activity android:name=".activities.SettingVersionActivity"
+        <activity android:name=".activities.SettingActivity"
             android:theme="@style/AppTheme"
+            android:label="@string/action_settings"
             android:parentActivityName=".activities.MainActivity">
             <meta-data
                 android:name="android.permission.PARENT_ACTIVITY"
@@ -61,7 +62,16 @@
 
         <activity android:name=".activities.UpdateVersionActivity"
             android:theme="@style/AppTheme"
-            android:parentActivityName=".activities.SettingVersionActivity">
+            android:parentActivityName=".activities.SettingActivity">
+            <meta-data
+                android:name="android.permission.PARENT_ACTIVITY"
+                android:value=".activites.SettingVersionActivity"/>
+        </activity>
+
+        <activity android:name=".activities.SchemaValidationActivity"
+            android:label="@string/periksa_skema"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".activities.SettingActivity">
             <meta-data
                 android:name="android.permission.PARENT_ACTIVITY"
                 android:value=".activites.SettingVersionActivity"/>

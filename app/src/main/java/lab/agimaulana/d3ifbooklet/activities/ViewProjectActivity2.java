@@ -110,6 +110,8 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
     @Override
     public void onBackPressed() {
         if(youtubeLayout.getVisibility() == View.VISIBLE){
+            if(youTubePlayer != null && youTubePlayer.isPlaying())
+                youTubePlayer.pause();
             youtubeLayout.setVisibility(View.GONE);
             return;
         }
@@ -200,7 +202,8 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
 
             @Override
             public void onError() {
-
+                imgPoster.setImageDrawable(getResources().getDrawable(R.drawable.logo_dif_mobile));
+                progressBarPoster.setVisibility(View.GONE);
             }
         });
     }

@@ -122,42 +122,108 @@ public class Utils {
         return serializer.read(Version.class, file);
     }
 
+    public static class BookletSerializer extends AsyncTask<Booklet, Booklet, Booklet>{
+        private Context context;
+        private String bookletName;
+        private Callback callback;
+
+        public BookletSerializer(Context context, String bookletName) {
+            this.context = context;
+            this.bookletName = bookletName;
+        }
+
+        public void setCallback(Callback callback) {
+            this.callback = callback;
+        }
+
+        @Override
+        protected Booklet doInBackground(Booklet... params) {
+            Booklet booklet;
+            try {
+                booklet = Booklet(context, bookletName);
+            } catch (Exception e) {
+                e.printStackTrace();
+                if(callback != null)
+                    callback.onFailed(e.getMessage());
+                booklet = null;
+            }
+            return booklet;
+        }
+
+        @Override
+        protected void onPostExecute(Booklet booklet) {
+            if(callback != null)
+                if(booklet != null)
+                    callback.onSerialized(booklet);
+                else
+                    callback.onFailed("Booklet null");
+        }
+
+        public interface Callback{
+            void onSerialized(Booklet booklet);
+            void onFailed(String message);
+        }
+    }
+
     public static Booklet Booklet(Context context, String bookletName) throws Exception {
         File file = new File(context.getFilesDir().getAbsolutePath() , bookletName);
         if(!file.exists())
             throw new Exception(bookletName + " not found");
         Serializer serializer = new Persister();
-        return serializer.read(Booklet.class, file);
+        try {
+            return serializer.read(Booklet.class, file);
+        }catch (OutOfMemoryError e){
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public static class SearchProject extends AsyncTask{
+        private Context context;
         String keyword;
         final ArrayList<Booklet> booklets;
         final ArrayList<Project> result;
         private OnGetResult onGetResult;
 
         public SearchProject(Context context, String keyword, OnGetResult onGetResult) throws Exception {
+            this.context = context;
             this.keyword = keyword.toLowerCase();
             booklets = new ArrayList<>();
-            if(Preference.getSearchSetting(context, BookletType.PT1))
-                booklets.add(Booklet(context, BookletConfig.FILE_BOOKLET_PT1));
-            if(Preference.getSearchSetting(context, BookletType.PT2))
-                booklets.add(Booklet(context, BookletConfig.FILE_BOOKLET_PT2));
-            if(Preference.getSearchSetting(context, BookletType.PA))
-                booklets.add(Booklet(context, BookletConfig.FILE_BOOKLET_PA));
-
             result = new ArrayList<>();
             this.onGetResult = onGetResult;
         }
 
         @Override
         protected Object doInBackground(Object[] params) {
-            for (Booklet booklet : booklets){
-                for (int i = 0; i < booklet.getProjects().size(); i++) {
-                    Project project = booklet.getProjects().get(i);
-                    if(project.getTitle().toLowerCase().contains(keyword))
-                        result.add(project);
+            try {
+                if(Preference.getSearchSetting(context, BookletType.PT1)){
+                    if(Cache.isCached(context, BookletConfig.FILE_BOOKLET_PT1))
+                        booklets.add((Booklet) Cache.read(context, BookletConfig.FILE_BOOKLET_PT1));
+                    else
+                        booklets.add(Booklet(context, BookletConfig.FILE_BOOKLET_PT1));
                 }
+                if(Preference.getSearchSetting(context, BookletType.PT2)){
+                    if(Cache.isCached(context, BookletConfig.FILE_BOOKLET_PT2))
+                        booklets.add((Booklet) Cache.read(context, BookletConfig.FILE_BOOKLET_PT2));
+                    else
+                        booklets.add(Booklet(context, BookletConfig.FILE_BOOKLET_PT2));
+                }
+                if(Preference.getSearchSetting(context, BookletType.PA)){
+                    if(Cache.isCached(context, BookletConfig.FILE_BOOKLET_PA))
+                        booklets.add((Booklet) Cache.read(context, BookletConfig.FILE_BOOKLET_PA));
+                    else
+                        booklets.add(Booklet(context, BookletConfig.FILE_BOOKLET_PA));
+                }
+
+                for (Booklet booklet : booklets){
+                    for (int i = 0; i < booklet.getProjects().size(); i++) {
+                        Project project = booklet.getProjects().get(i);
+                        if(project.getTitle().toLowerCase().contains(keyword))
+                            result.add(project);
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
             return null;
         }

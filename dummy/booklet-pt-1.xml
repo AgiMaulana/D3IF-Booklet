@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<booklet>
+    <!-- PROYEK TINGKAT 1 -->
+    <project>
+       <tingkat>Proyek Tingkat 1</tingkat>
+       <judul>I-Tajwid</judul>
+       <deskripsi>I-Tajwid yaitu suatu aplikasi berbentuk media interaktif pembelajaran yang berfokus pada bacaan tajwid untuk anak usia dini, 
+	 yang kami rancang semenarik mungkin untuk dapat menarik perhatian target anak - anak usia 7 - 12 tahun, agar anak mampu membaca Al - Qur'an 
+	 dengan benar melalui PC ataupun desktop.</deskripsi>
+       <poster>http://192.168.43.185:8000/poster.png</poster>
+       <video>eR2GFPIgzZA</video> <!-- default -->
+       <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+       </screenshots>
+       <developer>
+          <mahasiswa>
+              <nim>6706150017</nim>
+              <nama>Hardadi Nur Aziz</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706150125</nim>
+              <nama>Naila Iffah Purwita</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706152149</nim>
+              <nama>Hentina Awaliyah Fitriani</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706154109</nim>
+              <nama>Dzulfikar Nur Ahmad Faisal</nama>
+          </mahasiswa>
+       </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+       <tingkat>Proyek Tingkat 1</tingkat>
+       <judul>Fun Fruit Station</judul>
+       <deskripsi>Perangkat lunak yang berbasis game ini adalah perangkat lunak yang digunakan untuk memberikan motivasi anak dalam belajar yang dimasukkan ke dalam PC yang berupa game.</deskripsi>
+       <poster>http://192.168.43.185:8000/poster.png</poster>
+       <video>G6lRDj-fgzQ</video> <!-- default -->
+       <screenshots>
+           <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+       </screenshots>
+       <developer>
+          <mahasiswa>
+              <nim>6706150021</nim>
+              <nama>I Putu Nisa Surya Prabana</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706154101</nim>
+              <nama>Reza Dwi Hendarno</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706152153</nim>
+              <nama>Rahayu Indah Lestari</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706150041</nim>
+              <nama>Adzira Nur Widyanto</nama>
+          </mahasiswa>
+       </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+       <tingkat>Proyek Tingkat 1</tingkat>
+       <judul>Defend Of the Egg</judul>
+       <deskripsi>Perangkat lunak ini adalah perangkat lunak yang digunakan agar anak remaja tidak terjerumus ke dalam pergaulan bebas.</deskripsi>
+       <poster>http://192.168.43.185:8000/poster.png</poster>
+       <video>G6lRDj-fgzQ</video> <!-- default -->
+       <screenshots>
+           <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+       </screenshots>
+       <developer>
+          <mahasiswa>
+              <nim>6706154177</nim>
+              <nama>Andhika Brosnan</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706152065</nim>
+              <nama>Muhammad Arfandi</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706154161</nim>
+              <nama>Alfiyah Ramadian</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706154057</nim>
+              <nama>Rayhan Muhammad</nama>
+          </mahasiswa>
+       </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+       <tingkat>Proyek Tingkat 1</tingkat>
+       <judul>Human Skeleton Apps</judul>
+       <deskripsi>Perangkat lunak ini adalah perangkat lunak yang digunakan untuk memudahkan siswa SMP dalam pengenalan bagian - bagian kerangka manusia.</deskripsi>
+       <poster>http://192.168.43.185:8000/poster.png</poster>
+       <video>G6lRDj-fgzQ</video> <!-- default -->
+       <screenshots>
+           <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+       </screenshots>
+       <developer>
+          <mahasiswa>
+              <nim>6706150033</nim>
+              <nama>Musthofa Kemal Fasya</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706150133</nim>
+              <nama>Agni Octavia</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706154189</nim>
+              <nama>Lucky Esa Joeliano</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706152069</nim>
+              <nama>Try Taufan Rakhmawan</nama>
+          </mahasiswa>
+       </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+       <tingkat>Proyek Tingkat 1</tingkat>
+       <judul>Hello Animals!</judul>
+       <deskripsi>Game ini adalah game yang digunakan untuk mempelajari hewan dalam beberapa klasifikasi hewan dengan cara yang menyenangkan.</deskripsi>
+       <poster>http://192.168.43.185:8000/poster.png</poster>
+       <video>G6lRDj-fgzQ</video> <!-- default -->
+       <screenshots>
+           <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+       </screenshots>
+       <developer>
+          <mahasiswa>
+              <nim>6706150029</nim>
+              <nama>Farid Wajdi Kardbri</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706150013</nim>
+              <nama>Muhammad Nur Fuadi</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706152190</nim>
+              <nama>Gian Aria Wibowo</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706154157</nim>
+              <nama>Finna Rosalia</nama>
+          </mahasiswa>
+       </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+       <tingkat>Proyek Tingkat 1</tingkat>
+       <judul>Healthy Life Is Fun (HLIF)</judul>
+       <deskripsi>Game ini dibuat agar anak - anak dapat membiasakan diri untuk hidup sehat terutama dalam hal mengolah dan menyajikan makanan yang sehat.</deskripsi>
+       <poster>http://192.168.43.185:8000/poster.png</poster>
+       <video>G6lRDj-fgzQ</video> <!-- default -->
+       <screenshots>
+           <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+       </screenshots>
+       <developer>
+          <mahasiswa>
+              <nim>6706152181</nim>
+              <nama>Joki Patiaraja</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706150001</nim>
+              <nama>Nikolas Raditya K</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706151145</nim>
+              <nama>Marsha Chikita L P</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706154085</nim>
+              <nama>Anjas Tri Yuwono</nama>
+          </mahasiswa>
+       </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+       <tingkat>Proyek Tingkat 1</tingkat>
+       <judul>Bela Nada - Aplikasi Belajar Lagu Nasional dan Lagu Daerah</judul>
+       <deskripsi>Aplikasi Bela Nada merupakan aplikasi yang digunakan untuk memudahkan pengguna dalam menghafal lagu nasional dan daerah. Sistem ini diimplementasikan melalui 
+	 suatu aplikasi berbasis android.</deskripsi>
+       <poster>http://192.168.43.185:8000/poster.png</poster>
+       <video>eR2GFPIgzZA</video> <!-- default -->
+       <screenshots>
+           <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+       </screenshots>
+       <developer>
+          <mahasiswa>
+              <nim>6706154080</nim>
+              <nama>Andre Bahtiar Fauzi</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706154104</nim>
+              <nama>Andree Sulistya Saputra</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706150004</nim>
+              <nama>Dennis Indrawan</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706154156</nim>
+              <nama>Princess Iqlima Kafilla</nama>
+          </mahasiswa>
+       </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+       <tingkat>Proyek Tingkat 1</tingkat>
+       <judul>Tebar (Tebak Gambar)</judul>
+       <deskripsi>Aplikasi ini adalah aplikasi yang digunakan untuk mengenalkan hewan - hewan di sekitar kepada anak - anak. Aplikasi ini juga dilengkapi dengan suara dan 
+	 keterangan lengkap mengenai setiap hewannya. Aplikasi ini diharapkan mampu membuat anak kecil tahu mengenai ciri - ciri hewan dan namanya sendiri.</deskripsi>
+       <poster>http://192.168.43.185:8000/poster.png</poster>
+       <video>eR2GFPIgzZA</video> <!-- default -->
+       <screenshots>
+           <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+       </screenshots>
+       <developer>
+          <mahasiswa>
+              <nim>6706151120</nim>
+              <nama>Ahmad Syaiful Anam</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706152064</nim>
+              <nama>Aries Jakaraditya M</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706154072</nim>
+              <nama>Ikhwanul Fahmi</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706154176</nim>
+              <nama>M. Tri Al Haga</nama>
+          </mahasiswa>
+       </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>ILANG (Ingat Langkah)</judul>
+        <deskripsi>Aplikasi ini adalah aplikasi yang digunakan untuk meningkatkan kualitas otak agar mudah mengingat.
+        Aplikasi ini juga dilengkapi dengan beberapa pengaturan untuk mengubah tampilan dan di desain agar cocok untuk anak - anak.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706150028</nim>
+                <nama>Stana Edro Swargara</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154160</nim>
+                <nama>Juni Silaban</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150012</nim>
+                <nama>Muhammad Adryan Pratama</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150132</nim>
+                <nama>Elida Rosnanik Manalu</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+       <tingkat>Proyek Tingkat 1</tingkat>
+       <judul>Siapa Aku? (SIKU)</judul>
+       <deskripsi>Aplikasi ini dibuat untuk memotivasi para penggunanya melalui tokoh - tokoh nasional dan dunia.
+       Memberikan informasi tentang tokoh - tokoh besar dunia kepada pengguna secaa menarik.</deskripsi>
+       <poster>http://192.168.43.185:8000/poster.png</poster>
+       <video>eR2GFPIgzZA</video> <!-- default -->
+       <screenshots>
+           <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+       </screenshots>
+       <developer>
+          <mahasiswa>
+              <nim>6706150044</nim>
+              <nama>Jimmy Manopo Lumban Tobing</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706154060</nim>
+              <nama>Hibatullah Yasir</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706150128</nim>
+              <nama>Miftakhul Jannah</nama>
+          </mahasiswa>
+          <mahasiswa>
+              <nim>6706150140</nim>
+              <nama>Windi Wulan Dari</nama>
+          </mahasiswa>
+       </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>Doctor Virtual</judul>
+        <deskripsi>Website ini adalah website yang digunakan untuk melakukan serangkaian pemeriksaan untuk
+        mendiagnosa penyakit yang dialami pengguna, serta untuk dapat mengetahui tips penyembuhan serta obat herbal
+        yang dapat digunakan untuk mengobati penyakit pengguna.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706151121</nim>
+                <nama>Riski Novanda</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150137</nim>
+                <nama>Intan Khairunnisa F</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154077</nim>
+                <nama>Muhammad Ihsan</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154193</nim>
+                <nama>Muhammad Ilham G</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>Adventure of Gatot</judul>
+        <deskripsi>Game ini adalah game untuk memberi wawasan bagi anak mengenai pengetahuan budaya dan adat
+        istiadat berbagai negara.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster/adventure-of-gatot.jpg</poster>
+        <video>HLUKzzfKZcs</video>
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706151117</nim>
+                <nama>Akbar Agus Wijaya</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154097</nim>
+                <nama>Fajar Agustrian Prawira</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150129</nim>
+                <nama>Hotma Putri Ayu Sinaga</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154081</nim>
+                <nama>Idam Luqmana</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>Game Teka - teki Kesehatan</judul>
+        <deskripsi>Perangkat lunak ini berbasis game yang bertujuan untuk memberikan pendidikan kesehatan
+        kepada pengguna serta memberikan wawasan tentang penyebab penyakit dan cara mencegahnya</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706150037</nim>
+                <nama>Ade Bayu S</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154205</nim>
+                <nama>Muhammad Novrianda</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154089</nim>
+                <nama>Imam Agus Faisal</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154165</nim>
+                <nama>Tawarina Aprella Br. Barus</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>Bang Resik - Game Mengenal Budaya - budaya Indonesia</judul>
+        <deskripsi>Dalam game ini pengguna akan dibawa oleh Bang Resik yang merupakan karakter utama dalam game ini untuk mengelilingi
+        Indonesia yang dimulai dari barat Indonesia di Aceh sampai mengakhiri misinya di timur Indonesia di Papua.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster/bang-resik.jpg</poster>
+        <video>Cgod0nBQhUY</video>
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706152068</nim>
+                <nama>Eggy Prayogia Adistira</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154188</nim>
+                <nama>Aditya Rahmat Mutaqin</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154100</nim>
+                <nama>Rafi Hafizhni Anggia</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150048</nim>
+                <nama>Ricky Muhammad Fauzi</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>AMAN (Aku Mandiri)</judul>
+        <deskripsi>Game ini adalah game yan digunakan untuk melatih anak supaya mandiri dengan memberikan gambaran
+        mengenai sifat - sifat mandiri seperti merapikan tempat tidur dan lain - lain.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706154092</nim>
+                <nama>Gigih Pandega</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150024</nim>
+                <nama>Fahmi Taufikhul Hakim</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154168</nim>
+                <nama>Nurwinda Manurung</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150032</nim>
+                <nama>Ridho Maulana Cahyudi</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+    <tingkat>Proyek Tingkat 1</tingkat>
+    <judul>ABG (Asik Belajar Gambar)</judul>
+    <deskripsi>Perangkat lunak ini adalah perangkat lunak yang digunakan untuk bermain sambil belajar melalui gambar
+    dengan memberikan penjelasan atau keterangangambar dan cara pengejaan gambar tersebut.</deskripsi>
+    <poster>http://192.168.43.185:8000/poster.png</poster>
+    <video>eR2GFPIgzZA</video> <!-- default -->
+    <screenshots>
+        <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+    </screenshots>
+    <developer>
+        <mahasiswa>
+            <nim>6706154184</nim>
+            <nama>Aditya Radotti</nama>
+        </mahasiswa>
+        <mahasiswa>
+            <nim>6706150036</nim>
+            <nama>Arsyan Qasthari</nama>
+        </mahasiswa>
+        <mahasiswa>
+            <nim>6706154096</nim>
+            <nama>Fadhel Nuh</nama>
+        </mahasiswa>
+        <mahasiswa>
+            <nim>6706152152</nim>
+            <nama>Rahayu Pangestu Aprilia</nama>
+        </mahasiswa>
+    </developer>
+    <pembimbing>
+        <dosen>
+            <nip>0</nip>
+            <nama>Irman Hariman, S.T., M.T.</nama>
+        </dosen>
+    </pembimbing>
+</project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>Aplikasi Kupas Tuntas Dunia Kuliah (KuTu DuKu)</judul>
+        <deskripsi>Aplikasi ini adalah aplikasi yang digunakan untuk siswa - siswi SMA/SMK/sederajat dan alumni untuk
+        membantu mencari informasi tentang perkuliahan yang ada di Indonesia. Aplikasi ini memberikan informasi tentang perguruan tinggi,
+        program studi dan profesi yang bisa diambil.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706150016</nim>
+                <nama>Sena Dwi Septianto</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706151052</nim>
+                <nama>Femy Try Kurnia</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154112</nim>
+                <nama>Bram Andika Ahmad Al'aziz</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154180</nim>
+                <nama>Irfan Sholeh Hermawan</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>Ayo Sehat</judul>
+        <deskripsi>Aplikasi Ayo Sehat memberikan pembelajaran kepada anak dengan animasi interaktif tentang kesehatan gigi,
+        kesehatan tangan dan juga makanan sehat untuk dikonsumsi.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706154084</nim>
+                <nama>Daniel Hendra W</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150008</nim>
+                <nama>M. Ikhwan Hamzah</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154076</nim>
+                <nama>M. Rafi Septian</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154148</nim>
+                <nama>Novika Dian Renanda</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>P.K.L (Peraturan Keselamatan Lalu lintas)</judul>
+        <deskripsi>P.K.L nerupakan aplikasi media pembelajaran tentang berlalu lintas secara benar. Diharapkan dengan
+        adanya P.K.L masyarakat Indonesia lebih dapat memahami betapa pentingnya pengetahuan akan lalu lintas sehingga
+        dapat mengurangi tingkat kecelakaan yang terjadi dijalanan.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706151122</nim>
+                <nama>Muhammad Zein Ersyad</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150026</nim>
+                <nama>Singgih Darmawan</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150038</nim>
+                <nama>Deri Jumara</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150134</nim>
+                <nama>Salma Fauziah</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>Fun With English</judul>
+        <deskripsi>FWE merupakan aplikasi media pembelajaran yang dibangun pada desktop untuk siswa dan siswi SMP.
+        Penyampaian materi disajikan secara menarik dengan menggunakan media gambar, tulisan, dan suara yang akan
+        melatih kemampuan siswa maupun siswi untuk menggunakan grammar dengan baik.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster/fun-with-english.jpg</poster>
+        <video>o6KKegUv1ok</video>
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706151054</nim>
+                <nama>Muhammad Taqyrrahman</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154166</nim>
+                <nama>Gloria Ruth Henisa Manurung</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154074</nim>
+                <nama>Irsan Mochamad Ramdan</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150022</nim>
+                <nama>Faldi Oberton Silaen</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>Puzzl-Eng - Game Belajar Kosa Kata Bahasa Inggris Untuk Anak Sekolah Dasar</judul>
+        <deskripsi>Aplikasi Puzzl-Eng adalah aplikasi yang berbasis desktop yang ditujukan untuk user usia 7 - 9 tahun,
+        diharapkan aplikasi ini dapat membantu anak dalam mengetahui dan menghafal vocabulary.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster/puzzl-eng.jpg</poster>
+        <video>UJNPa3K9UtM</video>
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706154102</nim>
+                <nama>Hildan Fawwaz Naufal</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706152066</nim>
+                <nama>Ikhsan Ramadhan</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154170</nim>
+                <nama>Neca Aqila</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150034</nim>
+                <nama>Reza Anugrah Putra</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>ABAH (Ayo Belajar Hijaiyah)</judul>
+        <deskripsi>Aplikasi Abah adalah aplikasi yang berbasis desktop yang ditujukan untuk user usia 5 - 7 tahun,
+        diharapkan aplikasi ini dapat membantu anak dalam proses belajar membaca Al - Qur'an.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster/abah.jpg</poster>
+        <video>55tIsC3G_0c</video>
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706154094</nim>
+                <nama>Muh. Diman Lutfiyanto</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150046</nim>
+                <nama>Azi Agusti Rahmat</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154162</nim>
+                <nama>Indita Nurhafiza</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154106</nim>
+                <nama>Yusuf Agung Purnomo</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>Mau Sakit Apa?</judul>
+        <deskripsi>Aplikasi "Mau Sakit Apa?" adalah aplikasi yang berbasis desktop yang ditujukan untuk user usia 7 - 12 tahun,
+        diharapkan aplikasi ini dapat membantu anak mengetahui berbagai jenis macam penyakit.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>C9pGcljP3-0</video>
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706154062</nim>
+                <nama>Endra Wahyu Wardana</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154082</nim>
+                <nama>Teguh Umara E</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154146</nim>
+                <nama>Alfian Candra Nilasari</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154182</nim>
+                <nama>M. Randi</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>MHS (Mari Hidup Sehat)</judul>
+        <deskripsi>Aplikasi Mari Hidup Sehat adalah aplikasi game dan informasi untuk anak - anak dan remaja, diharapkan
+        aplikasi ini dapat membantu user dalam proses pendewasaan yang baik.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster/mari-hidup-sehat.jpg</poster>
+        <video>LDGGfa6UtOA</video>
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706150018</nim>
+                <nama>Irfan Naufal Ridi</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154110</nim>
+                <nama>Ahmad Faishal Afif</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150138</nim>
+                <nama>Khairunnisa Saragih</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>Let's Change Ourselves</judul>
+        <deskripsi>Aplikasi Let's Change Ourselves adalah aplikasi yang berbasis website yang ditujukan untuk user usia 5 - 10 tahun,
+        diharapkan aplikasi ini dapat membantu anak dalam proses pendewasan yang baik.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706154090</nim>
+                <nama>Irfan Muhammad Abyan</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150142</nim>
+                <nama>Ika Puspita Dewi</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154158</nim>
+                <nama>Muthia Virliani</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706152186</nim>
+                <nama>Hadiyan Kundrat Putra</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>Future Earth</judul>
+        <deskripsi>Future Earth Menyajikan materi secara menarik dengan menggunakan media gambar, tulisan dan suara yang akan melatih
+        anak untuk membuang sampah dan menambah pengetahuan, agar alam yang lebih baik.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706154086</nim>
+                <nama>Mohtar Nurwahid</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706151174</nim>
+                <nama>Elsa Wanti Samosir</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150002</nim>
+                <nama>Nur Rokhim Hamisesa</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150042</nim>
+                <nama>Andreas Rezki Wibowo</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>SID (Science In Discovery)</judul>
+        <deskripsi>Aplikasi Science In Discovery merupakan aplikasi khususu siswa SMP dan SMA. Memiliki fitur yang dapat mempermudah
+        orises pembelajaran. Menyajikan materi untuk pembelajaran dan permainan interaktif.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706152070</nim>
+                <nama>Danan Angie Prakoso</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154178</nim>
+                <nama>Shintya Nur Ayda</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154058</nim>
+                <nama>Thareq Ali Akbar</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154114</nim>
+                <nama>Rahmad Noor Widianto</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Tingkat 1</tingkat>
+        <judul>iSholat for Children</judul>
+        <deskripsi>Aplikasi iSholat for Children adalah aplikasi untuk mengajarkan sholat kepada anak - anak.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6706151118</nim>
+                <nama>Enrico Chiesa</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706154192</nim>
+                <nama>Ferdiansyah Edo S</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150006</nim>
+                <nama>Ageng Prasetyo</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6706150130</nim>
+                <nama>Wilda Mardhiani</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>0</nip>
+                <nama>Irman Hariman, S.T., M.T.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+</booklet>

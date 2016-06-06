@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<booklet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<version>1</version>
-</booklet>
+<version>
+	<booklet>
+		<type>Proyek Tingkat 1</type>
+		<version-number>1</version-number>
+	</booklet>
+	<booklet>
+		<type>Proyek Tingkat 2</type>
+		<version-number>1</version-number>
+	</booklet>
+	<booklet>
+		<type>Proyek AKhir</type>
+		<version-number>1</version-number>
+	</booklet>
+</version>
