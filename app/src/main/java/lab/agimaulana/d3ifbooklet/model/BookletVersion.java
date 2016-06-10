@@ -14,13 +14,13 @@ public class BookletVersion implements Serializable{
     @Element(name = "type")
     private String type;
     @Element(name = "version-number")
-    private int version;
+    private String version;
 
     public String getType() {
         return type;
     }
 
-    public int getVersion() {
+    public String getVersion() {
         return version;
     }
 }

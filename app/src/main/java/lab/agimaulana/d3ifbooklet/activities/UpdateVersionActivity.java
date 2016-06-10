@@ -155,16 +155,20 @@ public class UpdateVersionActivity extends AppCompatActivity implements View.OnC
     public void onResponse(retrofit2.Call<Version> call, Response<Version> response) {
         if(response.isSuccessful()){
             progressCheckVersion.setVisibility(View.GONE);
-            BookletVersion b = response.body().getBookletVersions().get(position);
-            tvNewVersion.setText(getString(R.string.tersedia_versi_baru, b.getVersion()));
-            tvNewVersion.setVisibility(View.VISIBLE);
-            btnDownload.setVisibility(View.VISIBLE);
+            //BookletVersion b = response.body().getBookletVersions().get(position);
+
+            for(BookletVersion b : response.body().getBookletVersions())
+                if(b.getType().equalsIgnoreCase(bookletVersion.getType())) {
+                    tvNewVersion.setText(getString(R.string.tersedia_versi_baru, b.getVersion()));
+                    tvNewVersion.setVisibility(View.VISIBLE);
+                    btnDownload.setVisibility(View.VISIBLE);
+                }
         }
     }
 
     @Override
     public void onFailure(retrofit2.Call<Version> call, Throwable t) {
-        progressDownload.setVisibility(View.GONE);
+        progressCheckVersion.setVisibility(View.GONE);
         Toast.makeText(UpdateVersionActivity.this, "Tidak dapat memerika. Coba lagi nanti.", Toast.LENGTH_SHORT).show();
     }
 }

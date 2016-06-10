@@ -21,13 +21,13 @@
     <string name="pt2">PT2</string>
     <string name="proyek_akhir">Proyek Akhir</string>
     <string name="proyek_tingkat_2">Proyek Tingkat 2</string>
-    <string name="proyek_tingkat_1">Proyek Tigkat 1</string>
+    <string name="proyek_tingkat_1">Proyek Tingkat 1</string>
 
     <string name="versi">Versi</string>
-    <string name="versi_saat_ini">Versi %1$d</string>
+    <string name="versi_saat_ini">Versi %1$s</string>
     <string name="perbarui_dokumen">Perbarui dokumen</string>
-    <string name="tersedia_versi_baru">Tersedia versi %1$d</string>
-    <string name="mengunduh_booklet">Mengunduh versi %1$d ....</string>
+    <string name="tersedia_versi_baru">Tersedia versi %1$s</string>
+    <string name="mengunduh_booklet">Mengunduh versi %1$s ....</string>
     <string name="mengunduh">Mengunduh</string>
     <string name="unduh">Unduh</string>
     <string name="pembaruan">Pembaruan</string>

@@ -37,7 +37,7 @@ public class AboutActivity extends AppCompatActivity {
         childItems.add(new ExpandableRecyclerAdapter
                 .ChildItem("Simple XML", "Niall Gallagher - http://simple.sourceforge.net/"));
         childItems.add(new ExpandableRecyclerAdapter
-                .ChildItem("YouTube Android Player API", "Google - https://developers.google.com/youtube/android/player//"));
+                .ChildItem("YouTube Android Player API", "Google - https://developers.google.com/youtube/android/player/"));
 
         ArrayList<ExpandableRecyclerAdapter.ParentItem> parentItems = new ArrayList<>();
         parentItems.add(new ExpandableRecyclerAdapter.ParentItem("Third Party Libraries", childItems));

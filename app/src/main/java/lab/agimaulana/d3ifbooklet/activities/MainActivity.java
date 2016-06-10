@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+                ((ProjectListFragment)pagerAdapter.getItem(viewPager.getCurrentItem())).hideFab();
             }
 
             @Override
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPageScrollStateChanged(int state) {
-                ((ProjectListFragment)pagerAdapter.getItem(viewPager.getCurrentItem())).hideFab();
+
             }
         });
     }

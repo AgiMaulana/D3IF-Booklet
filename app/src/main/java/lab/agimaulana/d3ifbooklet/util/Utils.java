@@ -12,6 +12,7 @@ import com.squareup.picasso.Target;
 
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
+import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -143,9 +144,9 @@ public class Utils {
                 booklet = Booklet(context, bookletName);
             } catch (Exception e) {
                 e.printStackTrace();
+                booklet = null;
                 if(callback != null)
                     callback.onFailed(e.getMessage());
-                booklet = null;
             }
             return booklet;
         }
@@ -174,7 +175,7 @@ public class Utils {
             return serializer.read(Booklet.class, file);
         }catch (OutOfMemoryError e){
             e.printStackTrace();
-            return null;
+            throw new Exception(e.getMessage());
         }
     }
 

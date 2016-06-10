@@ -193,7 +193,7 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
 
         String videoThumbnail = "http://img.youtube.com/vi/" + project.getVideo() + "/hqdefault.jpg";
         Log.d("Picasso - poster", videoThumbnail);
-        PicassoUtils.load(this, videoThumbnail, imgPoster, new PicassoUtils.LoadCallback() {
+        PicassoUtils.loadNoResize(this, videoThumbnail, imgPoster, new PicassoUtils.LoadCallback() {
             @Override
             public void onSuccess() {
                 progressBarPoster.setVisibility(View.GONE);
@@ -202,8 +202,9 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
 
             @Override
             public void onError() {
-                imgPoster.setImageDrawable(getResources().getDrawable(R.drawable.logo_dif_mobile));
+                imgPoster.setImageDrawable(getResources().getDrawable(R.drawable.default_youtube_thumbnail));
                 progressBarPoster.setVisibility(View.GONE);
+                layoutVideoButton.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -250,7 +251,7 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
     private void openYoutubeVideo(String id){
         try {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + id));
-            intent.putExtra("force_fullscreen",true);
+            //intent.putExtra("force_fullscreen",true);
             startActivity(intent);
         } catch (ActivityNotFoundException ex) {
             Intent intent = new Intent(Intent.ACTION_VIEW,

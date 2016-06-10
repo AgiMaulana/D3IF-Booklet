@@ -41,63 +41,86 @@ public class SchemaValidationActivity extends AppCompatActivity {
     }
 
     private void validate(){
-        Utils.BookletSerializer bookletSerializer = new Utils.BookletSerializer(this, BookletConfig.FILE_BOOKLET_PT1);
-        final Utils.BookletSerializer bookletSerializer2 = new Utils.BookletSerializer(this, BookletConfig.FILE_BOOKLET_PT2);
-        final Utils.BookletSerializer bookletSerializer3 = new Utils.BookletSerializer(this, BookletConfig.FILE_BOOKLET_PA);
-
-        bookletSerializer.setCallback(new Utils.BookletSerializer.Callback() {
+        new Thread(new Runnable() {
             @Override
-            public void onSerialized(Booklet booklet) {
-                textView1.setTextColor(getResources().getColor(R.color.blue_900));
-                textView1.setText(R.string.skema_valid);
-                progressBar1.setVisibility(View.GONE);
-                bookletSerializer2.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            public void run() {
+                try {
+                    Utils.Booklet(getApplicationContext(), BookletConfig.FILE_BOOKLET_PT1);
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            textView1.setTextColor(getResources().getColor(R.color.blue_900));
+                            textView1.setText(R.string.skema_valid);
+                            progressBar1.setVisibility(View.GONE);
+                        }
+                    });
+                } catch (final Exception e) {
+                    e.printStackTrace();
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            textView1.setTextColor(getResources().getColor(R.color.red_500));
+                            textView1.setText(getString(R.string.skema_error, e.getMessage()));
+                            progressBar1.setVisibility(View.GONE);
+                        }
+                    });
+                }
             }
+        }).start();
 
+        new Thread(new Runnable() {
             @Override
-            public void onFailed(String message) {
-                textView1.setTextColor(getResources().getColor(R.color.red_500));
-                textView1.setText(getString(R.string.skema_error, message));
-                progressBar1.setVisibility(View.GONE);
-                bookletSerializer2.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            public void run() {
+                try {
+                    Utils.Booklet(getApplicationContext(), BookletConfig.FILE_BOOKLET_PT2);
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            textView2.setTextColor(getResources().getColor(R.color.blue_900));
+                            textView2.setText(R.string.skema_valid);
+                            progressBar2.setVisibility(View.GONE);
+                        }
+                    });
+                } catch (final Exception e) {
+                    e.printStackTrace();
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            textView2.setTextColor(getResources().getColor(R.color.red_500));
+                            textView2.setText(getString(R.string.skema_error, e.getMessage()));
+                            progressBar2.setVisibility(View.GONE);
+                        }
+                    });
+                }
             }
-        });
+        }).start();
 
-        bookletSerializer.setCallback(new Utils.BookletSerializer.Callback() {
+        new Thread(new Runnable() {
             @Override
-            public void onSerialized(Booklet booklet) {
-                textView2.setTextColor(getResources().getColor(R.color.blue_900));
-                textView2.setText(R.string.skema_valid);
-                progressBar2.setVisibility(View.GONE);
-                bookletSerializer3.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            public void run() {
+                try {
+                    Utils.Booklet(getApplicationContext(), BookletConfig.FILE_BOOKLET_PA);
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            textView3.setTextColor(getResources().getColor(R.color.blue_900));
+                            textView3.setText(R.string.skema_valid);
+                            progressBar3.setVisibility(View.GONE);
+                        }
+                    });
+                } catch (final Exception e) {
+                    e.printStackTrace();
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            textView3.setTextColor(getResources().getColor(R.color.red_500));
+                            textView3.setText(getString(R.string.skema_error, e.getMessage()));
+                            progressBar3.setVisibility(View.GONE);
+                        }
+                    });
+                }
             }
-
-            @Override
-            public void onFailed(String message) {
-                textView2.setTextColor(getResources().getColor(R.color.red_500));
-                textView2.setText(getString(R.string.skema_error, message));
-                progressBar2.setVisibility(View.GONE);
-                bookletSerializer3.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-            }
-        });
-
-        bookletSerializer.setCallback(new Utils.BookletSerializer.Callback() {
-            @Override
-            public void onSerialized(Booklet booklet) {
-                textView3.setTextColor(getResources().getColor(R.color.blue_900));
-                textView3.setText(R.string.skema_valid);
-                progressBar3.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onFailed(String message) {
-                textView3.setTextColor(getResources().getColor(R.color.red_500));
-                textView3.setText(getString(R.string.skema_error, message));
-                progressBar3.setVisibility(View.GONE);
-            }
-        });
-
-        bookletSerializer.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        }).start();
     }
 
     @Override

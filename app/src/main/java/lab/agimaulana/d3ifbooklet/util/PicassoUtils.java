@@ -20,25 +20,15 @@ import java.io.IOException;
  */
 public class PicassoUtils {
     public static void load(Context context, String path, ImageView imageView){
-        File file = Utils.getImageFileFromInternal(context, path);
-        if(file != null){
-            Picasso.with(context).load(file).into(imageView, new Callback() {
-                @Override
-                public void onSuccess() {
-
-                }
-
-                @Override
-                public void onError() {
-
-                }
-            });
+        File file = Utils.getImageFileFromInternal(context, Uri.encode(path));
+        if(file.exists()){
+            Picasso.with(context).load(file).resize(400, 700).onlyScaleDown().into(imageView);
         }else{
-            Picasso.with(context).load(Uri.parse(path)).into(imageView);
+            Picasso.with(context).load(Uri.parse(path)).resize(400, 700).onlyScaleDown().into(imageView);
         }
     }
 
-    public static void load(final Context context, final String path, final ImageView imageView, final LoadCallback loadCallback){
+    public static void loadNoResize(final Context context, final String path, final ImageView imageView, final LoadCallback loadCallback){
         File file = Utils.getImageFileFromInternal(context, Uri.encode(path));
         if(file.exists()){
             Picasso.with(context).load(file).into(imageView, new Callback() {
@@ -54,7 +44,39 @@ public class PicassoUtils {
                 }
             });
         }else{
-            Picasso.with(context).load(Uri.parse(path)).into(imageView, new Callback() {
+            Picasso.with(context).load(Uri.parse(path)).resize(400, 700).onlyScaleDown().into(imageView, new Callback() {
+                @Override
+                public void onSuccess() {
+                    loadCallback.onSuccess();
+                    Utils.saveToInternalImageDir(context, Uri.encode(path), imageView.getDrawable());
+                    Log.i("PicassoUtils", "Download new image");
+                }
+
+                @Override
+                public void onError() {
+                    loadCallback.onError();
+                }
+            });
+        }
+    }
+
+    public static void load(final Context context, final String path, final ImageView imageView, final LoadCallback loadCallback){
+        File file = Utils.getImageFileFromInternal(context, Uri.encode(path));
+        if(file.exists()){
+            Picasso.with(context).load(file).resize(400, 700).onlyScaleDown().into(imageView, new Callback() {
+                @Override
+                public void onSuccess() {
+                    loadCallback.onSuccess();
+                    Log.i("PicassoUtils", "Load from saved image");
+                }
+
+                @Override
+                public void onError() {
+                    loadCallback.onError();
+                }
+            });
+        }else{
+            Picasso.with(context).load(Uri.parse(path)).resize(400, 700).onlyScaleDown().into(imageView, new Callback() {
                 @Override
                 public void onSuccess() {
                     loadCallback.onSuccess();

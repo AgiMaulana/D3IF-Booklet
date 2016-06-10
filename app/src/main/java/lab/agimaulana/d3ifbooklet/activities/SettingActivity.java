@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -26,7 +25,7 @@ public class SettingActivity extends AppCompatActivity implements RecyclerVersio
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting_version);
+        setContentView(R.layout.activity_settings);
 
         try {
             Version version = Utils.BookletVersion(this);
@@ -38,7 +37,9 @@ public class SettingActivity extends AppCompatActivity implements RecyclerVersio
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             recyclerView.setAdapter(adapter);
 
-            ((LinearLayout) findViewById(R.id.button_check_schema)).setOnClickListener(this);
+            LinearLayout btnSchemaValidator = ((LinearLayout) findViewById(R.id.button_check_schema));
+            btnSchemaValidator.setVisibility(View.VISIBLE);
+            btnSchemaValidator.setOnClickListener(this);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -54,5 +55,11 @@ public class SettingActivity extends AppCompatActivity implements RecyclerVersio
     @Override
     public void onClick(View view) {
         startActivity(new Intent(this, SchemaValidationActivity.class));
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        navigateUpTo(new Intent(this, MainActivity.class));
     }
 }

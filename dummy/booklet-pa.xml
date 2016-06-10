@@ -265,4 +265,400 @@
 		  </dosen>
        </pembimbing>
     </project>
+    <project>
+        <tingkat>Proyek Akhir</tingkat>
+        <judul>Age Of Hindian</judul>
+        <deskripsi>Age Of Hindian adalah permainan yang bergenre Turn-Based RPG. Permainan ini
+            dirancang untuk pengguna smartphone bersistem operasi android. Permainan ini mengambil
+            tema zaman kerajaan hindu-buddha Indonesia dengan mengangkat cerita dua kerajaan besar
+            yang ada di Indonesia, yaitu Kerajaan Sriwijaya dan Kerajaan Majapahit.Permainan ini ditujukan
+            untuk pelajar sekolah menengah pertama hingga sekolah menengah atas.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>000000000</nim>
+                <nama>No Available</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>00000000-0</nip>
+                <nama>No Available</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Akhir</tingkat>
+        <judul>Bocah</judul>
+        <deskripsi>Game Runner RPG Berbasis Mobile yang Mengangkat Sejarah Indonesia</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6306120047</nim>
+                <nama>Muhammad Lutfi Ibrahim</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6306121095</nim>
+                <nama>Hazmi Hibatul Hafiz</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6306120027</nim>
+                <nama>Gilang Fadilana</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>00000000-0</nip>
+                <nama>No Available</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Akhir</tingkat>
+        <judul>Cone</judul>
+        <deskripsi>Aplikasi Cone merupakan aplikasi yang ditujukan untuk penderita buta warna jenis
+            dikhromat. Cone membantu penderita dalam membedakan warna yang sulit untuk mereka
+            kenali melalui fitur “Satu Warna” yang akan meng-grayscale-kan warna yang tidak dipilih
+            dan “Ubah Warna” yang akan merubah warna yang dipilih. Selain dua fitur tersebut, Cone
+            juga dilengkapi fitur “Defisiensi Warna” yang memberikan informasi tentang defisiensi
+            warna.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>000000000</nim>
+                <nama>No Available</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>00000000-0</nip>
+                <nama>No Available</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Akhir</tingkat>
+        <judul>Gramaca</judul>
+        <deskripsi>Aplikasi Gramaca adalah sebuah alat bantu pembelajaran pengenalan huruf hijaiyah yang
+            menggunakan media elektronik smartphone Android. Aplikasi ini ditujukan untuk mereka yang
+            mempunyai keterbatasan mental atau anak-anak Tunagrahita ringan. Melalui aplikasi ini mereka
+            dapat belajar mengenal 30 huruf hijaiyah dengan media yang lebih interaktif, menarik dan
+            berbeda dari biasanya seperti buku Iqra. Aplikasi Gramaca ini dikemas dengan tampilan yang
+            menarik dan disertai Augmented Reality huruf hijaiyah 3D.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>000000000</nim>
+                <nama>Muhammad Ghufran</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>000000000</nim>
+                <nama>Fikri Fauzian</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>000000000</nim>
+                <nama>Khalimatu Rosyida</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>02740278-1</nip>
+                <nama>Retno Novi Dayawati, S.Si., MT.</nama>
+            </dosen>
+            <dosen>
+                <nip>00000000-0</nip>
+                <nama>Cahyana, S.T., M.Kom.</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Akhir</tingkat>
+        <judul>Gredio</judul>
+        <deskripsi>plikasi Gredio merupakan aplikasi berbasis android yang dirancang khusus terutama
+            untuk anak tunagrahita. Gredio berasal dari singkatan “Tunagrahita Reading Objek” karena aplikasi
+            ini mengunakan objek sekitar dalam penyusunan materinya. Aplikasi ini menggunakan media
+            berupa suara, gambar, teks dan video. Dibangun berdasarkan sistem pembelajaran khusus untuk
+            belajar membaca, seperti belajar membaca dengan menggunakan metode fonetis. Didalamnya
+            terdapat mengenal objek, mengenal bentuk suku kata serta mengenal bunyi dari suku kata
+            tersebut. Dilengkapi juga dengan latihan agar anak tunagrahita dapat belajar mengingat materi
+            yang sudah diberikan. Kemudian juga adanya fungsionalitas lihat video sebagai fun learning, agar
+            anak tidak cepat merasa bosan.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>000000000</nim>
+                <nama>No Available</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>00000000-0</nip>
+                <nama>No Available</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Akhir</tingkat>
+        <judul>Heroes of Indonesian</judul>
+        <deskripsi>Heroes of Indonesian merupakan game media pembelajaran mengenai sejarah dengan berbasis
+            android yang di develop menggunakan game engine Unity. Penyampaian materi disajikan secara
+            lebih menarik dengan menggunakan media gambar, tulisan, suara, dan gesture karakter. Dimana
+            pemaian akan diberikan sebuah intro mengenai sejarah pasca kemerdekan mulai tahun 1946 –
+            1949. Lalu setelah intro berakhir akan masuk ke dalam gameplay yang dimana mengadopsi
+            permaian yang ada pada game plan vs zombie. Diharapkan dengan adanya game Heroes of
+            Indonesian anak – anak dapat belajar sejarah dimana saja dengan lebih fun bersama teman-
+            temannya.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>000000000</nim>
+                <nama>No Available</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>00000000-0</nip>
+                <nama>No Available</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Akhir</tingkat>
+        <judul>Jejak Merah Putih</judul>
+        <deskripsi>Game Jejak Merah Putih merupakan sebuah permainan yang dibangun berbasis
+            desktop sebagai media game edukatif budaya dan sejarah Indonesia, sehingga dapat
+            memberikan sistem pembelajaran yang lebih menyenangkan dan menarik. &lt;br/&gt;&lt;br/&gt;
+
+            Game ini dimaksudkan agar belajar sejarah menjadi lebih menyenangkan. Di
+            dalam game, juga disisipkan informasi kebudayaan daerah seperti lagu daerah, senjata
+            daerah, dan makanan daerah serta ilmu sejarah khususnya Sejarah Pasca Kemerdekaan
+            Indonesia. Untuk menyelesaikan game ini, player dituntut untuk berpetualang
+            menjelajahi Pulau Jawa untuk mencari bendera pusaka yang telah hilang. Dalam
+            petualangannya tersebut player akan menghadapi pertanyaan-pertanyaan yang harus
+            dijawab berkaitan dengan materi Sejarah Pasca Kemerdekaan Indonesia.
+        </deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>000000000</nim>
+                <nama>No Available</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>00000000-0</nip>
+                <nama>No Available</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Akhir</tingkat>
+        <judul>Kemana Kita?</judul>
+        <deskripsi>Kemana Kita? merupakan sebuah permainan edukasi berbasis Android yang
+            mengangkat tema angkot di wilayah Bandung. Dalam sistem game Kemana Kita? memiliki
+            fitur-fitur seperti memilih wilayah yang ingin dimainkan dan melihat info trayek angkot di
+            wilayah Bandung. Perbedaan game Kemana Kita? dengan game lainnya dari segi tema
+            yang diangkat yaitu menggunakan trayek yang ada di wilayah Bandung. Selain itu,
+            pemain dapat mengetahui tempat-tempat menarik yang ada di wilayah Bandung. Saat
+            memulai permainan, pemain diharuskan mematuhi semua rambu-rambu yang ada
+            selama di jalan raya. Sehingga, selain mendapakan info mengenai trayek angkot di
+            wilayah Bandung, diharapkan pemain dapat mendapatkan nilai-nilai edukasi yang
+            terdapat pada game Kemana Kita?.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>000000000</nim>
+                <nama>No Available</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>00000000-0</nip>
+                <nama>No Available</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Akhir</tingkat>
+        <judul>Educational Games for Tourism in Java Island Using Android</judul>
+        <deskripsi>Knowing Jowo memberikan pembelajaran mengenai
+            pengenalan objek-objek wisata dan budaya yang berada di Pulau Jawa, serta mengajarkan
+            etika untuk peduli terhadap lingkungan sekitar dengan cara memunguti sampah-sampah.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6306114049</nim>
+                <nama>Adi Putra Satya</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6306110019</nim>
+                <nama>Fahrur Razi Siddiq</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6306110029</nim>
+                <nama>Radian Adi Pratama</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>00000000-0</nip>
+                <nama>No Available</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Akhir</tingkat>
+        <judul>Matematika Diskalkulia</judul>
+        <deskripsi>Aplikasi MATDIS (Matematika Diskalkulia) adalah aplikasi ber-platform mobile Android
+            sebagai terapi pembelajaran matematika untuk anak yang mengalami kesulitan dalam
+            mempelajari matematika atau yang biasa disebut dengan diskalkulia. Aplikasi ini dibangun
+            dengan prinsip pembelajaran kompetensi matematika dasar seperti operasi penambahan
+            (+), pengurangan (-), perkalian (x), pembagian (:), kurang dari (&lt;), lebih dari (>), dan sama
+            dengan (=).</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>6306121103</nim>
+                <nama>Abdillah Hidayatulloh</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6306120079</nim>
+                <nama>Faisal Rifai</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>6306124109</nim>
+                <nama>Mela Kania Haq</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>00000000-0</nip>
+                <nama>No Available</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Akhir</tingkat>
+        <judul>Petualangan Bima Manusia Monyet</judul>
+        <deskripsi>Game Android: Petualangan Bima Manusia Monyet</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>000000000</nim>
+                <nama>Rizky  Andika</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>000000000</nim>
+                <nama>Arief Samdani Siregar</nama>
+            </mahasiswa>
+            <mahasiswa>
+                <nim>000000000</nim>
+                <nama>Aldiansyah</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>00000000-0</nip>
+                <nama>No Available</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Akhir</tingkat>
+        <judul>Sea Turtle Rescue</judul>
+        <deskripsi>Game Sea Turtle Rescue merupakan suatu bentuk kampanye penyelamatan penyu dalam bentuk
+            mobile game. Sea Turtle Rescue menjadi salah satu bentuk kampanye kreatif yang mengambil
+            latar belakang siklus hidup penyu sebagai materi game penyelamatan. Sea Turtle Rescue
+            diharapkan mampu memberikan kesadaran, pengetahuan dan pendidikan kepada masyarakat
+            tentang pentingnya penyelamatan penyu dan bahaya yang mengancam selama siklus hidupnya.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>000000000</nim>
+                <nama>No Available</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>00000000-0</nip>
+                <nama>No Available</nama>
+            </dosen>
+        </pembimbing>
+    </project>
+    <project>
+        <tingkat>Proyek Akhir</tingkat>
+        <judul>SIEUN</judul>
+        <deskripsi>SIEUN merupakan video game horror khas indonesia berbasis virtual
+            reality yang mampu membawa atmosfir horor yang lebih nyata. Memiliki
+            konsep seperti acara Uji Nyali, dimana player akan berada di sebuah
+            tempat atau bangunan angker dan ditugaskan untuk bertahan dari
+            gangguan makhluk gaib serta mengumpulkan 8 benda mistis yang
+            memiliki mitos-mitos dari masyarakat Indonesia. Dengan pengunaan
+            oculus menjadikan susana dalam game lebih nyata dan menakutkan.</deskripsi>
+        <poster>http://192.168.43.185:8000/poster.png</poster>
+        <video>eR2GFPIgzZA</video> <!-- default -->
+        <screenshots>
+            <screenshot>http://192.168.43.185:8000/screenshot.jpg</screenshot>
+        </screenshots>
+        <developer>
+            <mahasiswa>
+                <nim>000000000</nim>
+                <nama>No Available</nama>
+            </mahasiswa>
+        </developer>
+        <pembimbing>
+            <dosen>
+                <nip>00000000-0</nip>
+                <nama>No Available</nama>
+            </dosen>
+        </pembimbing>
+    </project>
 </booklet>

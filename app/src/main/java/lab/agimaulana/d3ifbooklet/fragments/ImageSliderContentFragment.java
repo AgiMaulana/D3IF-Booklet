@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
 
 import lab.agimaulana.d3ifbooklet.R;
+import lab.agimaulana.d3ifbooklet.util.PicassoUtils;
 
 /**
  * Created by Agi Maulana on 4/15/2016.
@@ -29,6 +30,7 @@ public class ImageSliderContentFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         String url = getArguments().getString("image");
         ImageView image = (ImageView) getView().findViewById(R.id.imageview);
-        Picasso.with(getActivity()).load(Uri.parse(url)).into(image);
+        //Picasso.with(getActivity()).load(Uri.parse(url)).into(image);
+        PicassoUtils.load(getActivity(), url, image);
     }
 }
