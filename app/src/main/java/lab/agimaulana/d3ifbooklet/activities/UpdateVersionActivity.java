@@ -170,5 +170,6 @@ public class UpdateVersionActivity extends AppCompatActivity implements View.OnC
     public void onFailure(retrofit2.Call<Version> call, Throwable t) {
         progressCheckVersion.setVisibility(View.GONE);
         Toast.makeText(UpdateVersionActivity.this, "Tidak dapat memerika. Coba lagi nanti.", Toast.LENGTH_SHORT).show();
+        t.printStackTrace();
     }
 }

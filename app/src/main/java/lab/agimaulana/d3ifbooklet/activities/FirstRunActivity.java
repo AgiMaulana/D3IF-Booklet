@@ -2,11 +2,13 @@ package lab.agimaulana.d3ifbooklet.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 import android.widget.ProgressBar;
+
 
 import lab.agimaulana.d3ifbooklet.R;
 import lab.agimaulana.d3ifbooklet.config.BookletConfig;

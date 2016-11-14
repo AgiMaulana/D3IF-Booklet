@@ -20,6 +20,7 @@ import java.io.IOException;
  */
 public class PicassoUtils {
     public static void load(Context context, String path, ImageView imageView){
+        Log.d("PicassoUtils", path);
         File file = Utils.getImageFileFromInternal(context, Uri.encode(path));
         if(file.exists()){
             Picasso.with(context).load(file).resize(400, 700).onlyScaleDown().into(imageView);
@@ -29,6 +30,7 @@ public class PicassoUtils {
     }
 
     public static void loadNoResize(final Context context, final String path, final ImageView imageView, final LoadCallback loadCallback){
+        Log.d("PicassoUtils", path);
         File file = Utils.getImageFileFromInternal(context, Uri.encode(path));
         if(file.exists()){
             Picasso.with(context).load(file).into(imageView, new Callback() {
@@ -61,6 +63,7 @@ public class PicassoUtils {
     }
 
     public static void load(final Context context, final String path, final ImageView imageView, final LoadCallback loadCallback){
+        Log.d("PicassoUtils", path);
         File file = Utils.getImageFileFromInternal(context, Uri.encode(path));
         if(file.exists()){
             Picasso.with(context).load(file).resize(400, 700).onlyScaleDown().into(imageView, new Callback() {

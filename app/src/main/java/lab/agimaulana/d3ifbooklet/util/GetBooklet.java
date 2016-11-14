@@ -44,6 +44,7 @@ public class GetBooklet {
                         dialog.cancel();
                     }
                 }).create();
+        Log.d("GetBooklet", url);
     }
 
     public void setListener(FetchListener listener) {

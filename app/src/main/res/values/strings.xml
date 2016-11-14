@@ -15,6 +15,7 @@
     <string name="cari_tidak_ditemukan">Proyek tidak tersedia</string>
     <string name="error_connection">Tidak dapat mengunduh data.\nketuk disini untuk mencoba lagi.</string>
     <string name="error_connection2">Tidak dapat mengunduh data</string>
+    <string name="error_auth">Tidak dapat mengotentikasi</string>
 
     <string name="pa">PA</string>
     <string name="pt1">PT1</string>
@@ -44,6 +45,8 @@
     <string name="deskripsi">Aplikasi pustaka karya D3 Teknik Informatika, Fakultas Ilmu Terapan, Telkom University.</string>
     <string name="copyright">Copyright &#169; 2016</string>
     <string name="copyright_team">D3 Teknik informatika, Telkom University</string>
+    <string name="developer">Pengembang</string>
+    <string name="developer_name">Agi Maulana (6706144099)\nD3 Teknik Informatika 2014</string>
 
     <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
     <string name="lorem_ipsum">Lorem ipsum</string>

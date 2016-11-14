@@ -3,6 +3,7 @@ package lab.agimaulana.d3ifbooklet.dialogs;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatDialogFragment;
@@ -79,8 +80,10 @@ public class SearchDialogFragment extends AppCompatDialogFragment implements Vie
 
     @Override
     public void onCancel(DialogInterface dialog) {
-        showInputMethod(etSearch);
-        getDialog().getWindow().setSoftInputMode (WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        if(Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
+            showInputMethod(etSearch);
+            getDialog().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        }
         super.onCancel(dialog);
     }
 

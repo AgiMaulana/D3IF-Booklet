@@ -2,11 +2,14 @@ package lab.agimaulana.d3ifbooklet.activities;
 
         import android.content.ActivityNotFoundException;
         import android.content.Intent;
+        import android.graphics.Color;
         import android.net.Uri;
+        import android.os.Build;
         import android.os.Bundle;
         import android.support.annotation.Nullable;
         import android.support.design.widget.AppBarLayout;
         import android.support.design.widget.CollapsingToolbarLayout;
+        import android.support.v4.view.ViewCompat;
         import android.support.v7.app.AppCompatActivity;
         import android.support.v7.widget.AppCompatTextView;
         import android.support.v7.widget.LinearLayoutManager;
@@ -15,10 +18,13 @@ package lab.agimaulana.d3ifbooklet.activities;
         import android.util.Log;
         import android.view.MenuItem;
         import android.view.View;
+        import android.view.animation.Animation;
+        import android.view.animation.AnimationUtils;
         import android.webkit.WebView;
         import android.widget.ArrayAdapter;
         import android.widget.FrameLayout;
         import android.widget.ImageView;
+        import android.widget.LinearLayout;
         import android.widget.ListView;
         import android.widget.ProgressBar;
         import android.widget.RelativeLayout;
@@ -41,6 +47,7 @@ package lab.agimaulana.d3ifbooklet.activities;
         import lab.agimaulana.d3ifbooklet.adapter.RVPreceptorsAdapter;
         import lab.agimaulana.d3ifbooklet.adapter.RVScreenshotAdapter;
         import lab.agimaulana.d3ifbooklet.dialogs.YoutubeEmbedDialogFragment;
+        import lab.agimaulana.d3ifbooklet.model.AppBarStateListener;
         import lab.agimaulana.d3ifbooklet.model.Lecturer;
         import lab.agimaulana.d3ifbooklet.model.Project;
         import lab.agimaulana.d3ifbooklet.model.ProjectList;
@@ -52,7 +59,8 @@ package lab.agimaulana.d3ifbooklet.activities;
 /**
  * Created by Agi Maulana on 4/14/2016.
  */
-public class ViewProjectActivity2 extends AppCompatActivity implements View.OnClickListener, RVScreenshotAdapter.OnClickListener, YouTubePlayer.OnInitializedListener, YouTubePlayer.PlaybackEventListener, AppBarLayout.OnOffsetChangedListener {
+public class ViewProjectActivity2 extends AppCompatActivity implements View.OnClickListener, RVScreenshotAdapter.OnClickListener, YouTubePlayer.OnInitializedListener, YouTubePlayer.PlaybackEventListener {
+    private CollapsingToolbarLayout collapsingToolbarLayout;
     private AppBarLayout appBarLayout;
 
     private ImageView imgPoster;
@@ -90,6 +98,7 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_deep_orange_500_24dp);
         getSupportActionBar().setTitle("");
+        ViewCompat.setTransitionName(findViewById(R.id.appbarLayout), "EXTRA IMAGE");
         setupWidget();
 
         project = (Project) getIntent().getSerializableExtra("project");
@@ -100,7 +109,6 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
     @Override
     protected void onStart() {
         super.onStart();
-        appBarLayout.addOnOffsetChangedListener(this);
         imgPoster.setOnClickListener(this);
         youtubeCloseButton.setOnClickListener(this);
         youtubeLaunchApp.setOnClickListener(this);
@@ -120,6 +128,9 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
 
     private void setupWidget(){
         appBarLayout = (AppBarLayout) findViewById(R.id.appbarLayout);
+        collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        collapsingToolbarLayout.setExpandedTitleColor(android.R.color.transparent);
+        collapsingToolbarLayout.setCollapsedTitleTextColor(R.color.white);
 
         imgPoster = (ImageView) findViewById(R.id.imageview_poster);
         layoutVideoButton = (RelativeLayout) findViewById(R.id.relativeLayout);
@@ -265,11 +276,6 @@ public class ViewProjectActivity2 extends AppCompatActivity implements View.OnCl
         if(item.getItemId() == android.R.id.home)
             onBackPressed();
         return true;
-    }
-
-    @Override
-    public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-
     }
 
     @Override

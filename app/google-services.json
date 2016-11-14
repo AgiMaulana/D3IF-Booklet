@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "861858174353",
+    "firebase_url": "https://booklet-d3if.firebaseio.com",
+    "project_id": "booklet-d3if",
+    "storage_bucket": "booklet-d3if.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861858174353:android:2577fc0969128cdc",
+        "android_client_info": {
+          "package_name": "lab.agimaulana.d3ifbooklet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "861858174353-dfskkmv75t9q52s5koh5baprtm48okce.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "lab.agimaulana.d3ifbooklet",
+            "certificate_hash": "77603A85698A5156E7298AD202026C61E7D5B7D5"
+          }
+        },
+        {
+          "client_id": "861858174353-q7b5ta57bgo6446uicmdnl1n5gmbuoa3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOsbmVAL18NcN-gZx2wRe0PP33x0halww"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "861858174353-q7b5ta57bgo6446uicmdnl1n5gmbuoa3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

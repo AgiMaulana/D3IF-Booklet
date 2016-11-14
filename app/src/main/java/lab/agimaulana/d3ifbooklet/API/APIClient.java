@@ -9,6 +9,6 @@ import retrofit2.http.GET;
  * Created by Agi Maulana on 4/13/2016.
  */
 public interface APIClient {
-    @GET("version.xml")
+    @GET("version.xml?alt=media")
     Call<Version> getVersion();
 }
